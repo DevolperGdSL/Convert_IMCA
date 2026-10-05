@@ -3,7 +3,7 @@ set -e
 
 # =============================================================================
 # BUILD_APPIMAGE.SH - Gerador de Pacote Linux AppImage (.image / .AppImage)
-# Projeto: Convert_IMCA (v1.4.0)
+# Projeto: Convert_IMCA (v1.5.0)
 # =============================================================================
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

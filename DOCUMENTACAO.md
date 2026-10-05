@@ -357,15 +357,13 @@ O projeto adota a convenção de Versionamento Semântico (`MAJOR.MINOR.PATCH`):
   - Suporte a empacotamento autônomo Linux AppImage e Windows `.exe`.
 - **Versão `v1.2.0`:**
   - Reformulação visual com fluxo de 3 telas lineares e introdução da animação da chama viva com *breathing glow*.
-- **Versão `v1.3.0`:**
-  - Refinamento da tela inicial com botão único hero e correção de robustez no seletor nativo do sistema operacional.
-- **Versão `v1.4.0` (Versão Atual):**
-  - **Identidade Visual Black & Orange:** Fundo em preto fosco profundo (`BLACK #171717`), acentos e botão principal em laranja fogo vibrante (`ORANGE #F25623`), criando um contraste arrojado e moderno.
-  - **Elementos Menos Arredondados (Design Geométrico):** Substituição das antigas formas em pílula oval (`border-radius: 9999px`) por cartões e botões com cantos sutis e arquitetônicos (`border-radius: 8px` a `12px`).
-  - **Tela 1:** Botão hero retangular em degradê Orange (`#F25623` a `#D84210`) com cantos de 12px, ícone geométrico de upload e Drag & Drop ativo.
-  - **Tela 2:** A chama viva animada em alta resolução com reflexos e sombras quentes em `#F25623`.
-  - **Tela 3:** Dois cartões retangulares estilizados (`mostrar prévia` em grafite `#242424` e `mostrar arquivo gerado` em Orange `#F25623`) com cantos de 12px.
-  - Atualização dos pacotes autônomos Linux AppImage e motor nativo Rust.
+- **Versão `v1.4.0`:**
+  - Introdução do design geométrico Black & Orange com elementos menos arredondados (cantos de 8px a 12px).
+- **Versão `v1.5.0` (Versão Atual):**
+  - **Correção da Rolagem da Tabela de Prévia:** Cabeçalho fixo (*sticky*) 100% opaco (`background: #1C1C1C; z-index: 20`) com `border-collapse: separate; border-spacing: 0;` e ajuste do container de rolagem, eliminando qualquer vazamento ou sobreposição de linhas sob o cabeçalho.
+  - **Unificação de Cores dos Botões (#F25623):** O botão de busca da Tela 1 e o botão de arquivo gerado da Tela 3 adotam rigorosamente o mesmo tom de laranja sólido `#F25623`, sem lavagem de cor.
+  - **Eliminação de Efeitos Luminescentes Excessivos:** Remoção da luz ambiente difusa (*ambient glow*), eliminação de halos neon em repouso e atenuação do efeito de respiração da chama para um brilho orgânico e sutil, reservando destaques luminosos exclusivamente para a passagem do mouse (*hover*).
+  - Atualização dos pacotes autônomos e motor Rust para a versão 1.5.0.
 
 ### 6.3 Conclusão e Próximos Passos
 O conversor e o formato `.IMCA` consolidam uma ponte de altíssima eficiência entre as secretarias da igreja (que trabalham com planilhas Excel) e os voluntários na ponta final (que utilizam o aplicativo móvel `cabeceira-pwa1`). A economia de mais de 73% de armazenamento e a velocidade de leitura em milissegundos garantem uma experiência de uso fluida, estável e moderna.
@@ -375,31 +373,31 @@ O conversor e o formato `.IMCA` consolidam uma ponte de altíssima eficiência e
 ## Capítulo 7: A Interface Gráfica Desktop e o Empacotamento Multiplataforma (.exe e .AppImage)
 
 ### 7.1 A Filosofia da Interface de Três Telas (Entrada, Carregamento e Saída)
-A experiência do usuário no Convert_IMCA foi consolidada na versão **`v1.4.0`** com linguagem visual Black & Orange e geometria arquitetônica:
-- **Zero Poluição:** Telas limpas, sem elementos conflitantes ou caixas desnecessárias.
+A experiência do usuário no Convert_IMCA foi refinada na versão **`v1.5.0`** com rigor visual e usabilidade ergonômica:
+- **Zero Poluição:** Telas limpas, sem elementos conflitantes, borrões ou halos luminosos desnecessários.
 - **Narrativa Clara:** Cada tela cumpre uma missão única:
   1. *Entrada*: O usuário localiza e entrega a planilha em um botão hero retangular acolhedor.
-  2. *Carregamento*: A chama viva pulsa enquanto os algoritmos processam os dados em milissegundos.
-  3. *Conclusão*: O usuário escolhe entre inspecionar os dados gerados (*mostrar prévia*) ou revelar o arquivo no computador (*mostrar arquivo gerado*).
+  2. *Carregamento*: A chama viva pulsa suavemente enquanto os algoritmos processam os dados em milissegundos.
+  3. *Conclusão*: O usuário escolhe entre inspecionar os dados gerados (*mostrar prévia*) com rolagem perfeita ou revelar o arquivo no computador (*mostrar arquivo gerado*).
 
 ```mermaid
 flowchart TD
     subgraph Tela1 ["Tela 1: Entrada (Botão Hero Geométrico)"]
         Tag["| MOTOR DE CALENDÁRIO • IMCA"]
         T1["Convert IMCA\n(Tipografia Branca Pura #FFFFFF)"]
-        Hero["🟧 BUSCAR ARQUIVO XLSX\n(Cartão Retangular #F25623 + Drag&Drop)"]
+        Hero["🟧 BUSCAR ARQUIVO XLSX\n(Laranja Sólido #F25623 + Drag&Drop)"]
         Tag --> T1 --> Hero
     end
 
     subgraph Tela2 ["Tela 2: Carregamento"]
-        F2["🔥 Chama Viva Animada\n(Breathing Glow Orange #F25623)"]
+        F2["🔥 Chama Viva Animada\n(Breathing Glow Suave e Natural)"]
         S2["Status Dinâmico:\n'Lendo planilha...' -> 'Extraindo 318 eventos...'"]
         F2 --> S2
     end
 
     subgraph Tela3 ["Tela 3: Conclusão (Cartões Geométricos)"]
-        R1["mostrar prévia\n(Cartão Escuro #242424)"]
-        R2["mostrar arquivo gerado\n(Cartão Orange #F25623)"]
+        R1["mostrar prévia\n(Tabela com Cabeçalho Sticky Opaco)"]
+        R2["mostrar arquivo gerado\n(Laranja Sólido #F25623)"]
         R3["↺ Converter outro arquivo"]
         R1 --- R2 --- R3
     end
@@ -409,20 +407,19 @@ flowchart TD
     R3 --> Tela1
 ```
 
-### 7.2 Tela 1: O Começo Geométrico (Black #171717 & Orange #F25623)
-A versão `v1.4.0` adota a estética Black & Orange com geometria menos arredondada:
-- **Identidade Visual e Paleta:** O fundo preto fosco profundo (`#171717`) acolhe elementos com bordas em cinza escuro (`#333333`) e iluminação ambiente calorosa em laranja vibrante (`#F25623`).
-- **Geometria de Cantos (Menos Arredondados):** Em conformidade com o design gráfico moderno, todos os botões e cartões utilizam raios suaves de canto (`border-radius: 8px` a `12px`), abandonando as pílulas arredondadas convencionais em favor de uma estética estruturada e industrial.
-- **Botão Único Hero Geométrico:**
-  - Formato retangular moderno de 72px de altura com cantos de 12px.
-  - Gradiente marcante em Orange (`#F25623` a `#D84210`) com sombra difusa e brilho dinâmico no hover.
-  - Ícone de upload integrado em caixa geométrica translúcida de 8px de raio.
-  - Título em caixa alta `BUSCAR ARQUIVO XLSX` acompanhado pelo subtítulo orientativo `ou arraste e solte a planilha aqui`.
-  - **Área Ativa de Drag & Drop:** Suporte integral a arrastar arquivos com destaque visual pulsante ao passar por cima.
-- **Configurações Discretas:** O botão colapsado `⚙ Configurações` mantém o padrão visual limpo, permitindo ajuste de horário padrão (`19:30`) e tradução para português sem poluir a visão do usuário leigo.
+### 7.2 Tela 1: O Começo Geométrico e o Botão Único Unificado
+A versão `v1.5.0` aprimora os contrastes e remove efeitos difusos:
+- **Fundo Sóbrio e Limpo:** O fundo preto fosco profundo (`#171717`) agora se apresenta livre de manchas luminosas (*ambient glow* desativado), garantindo sobriedade e foco nos dados.
+- **Botão Único com Cor Unificada (#F25623):** O botão de busca adota o mesmo laranja sólido oficial do botão final, com sombra discreta em repouso (`box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);`) e leve realce apenas durante o *hover*.
+- **Geometria de Cantos:** Mantém cantos sutis de 12px, reforçando a identidade arquitetônica.
 
-### 7.3 Tela 2: A Chama Viva Animada (Breathing Glow e Etapas Narrativas)
-Assim que o arquivo é selecionado, a interface transiciona instantaneamente para a tela de carregamento:
+### 7.3 Tela 2: A Chama Viva com Iluminação Equilibrada
+O símbolo oficial da chama mantém seu movimento orgânico de respiração (*breathing glow*), porém com filtros de sombra calibrados para níveis naturais (`drop-shadow: 0 4px 12px rgba(242, 86, 35, 0.45)`), sem o excesso de saturação visual das versões iniciais.
+
+### 7.4 Tela 3: Conclusão e Rolagem Perfeita na Tabela de Prévia
+O modal de prévia foi corrigido para resolver a sobreposição de linhas durante a rolagem:
+- **Cabeçalho Fixo 100% Opaco:** As células de cabeçalho (`<th>`) possuem fundo sólido (`#1C1C1C`), camada `z-index: 20` e borda inferior nítida de 2px.
+- **Isolamento de Células:** O uso de `border-collapse: separate; border-spacing: 0;` e a remoção de espaçamentos verticais no container de rolagem asseguram que as linhas da tabela deslizem suavemente por baixo do cabeçalho sem qualquer vazamento de texto.
 - **A Chama:** O símbolo oficial da chama extraído em alta definição ([`assets/flame.png`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/assets/flame.png)) e embutido diretamente no HTML como base64, garantindo autonomia total sem necessidade de arquivos externos.
 - **Animação Breathing Glow:** Um efeito de respiração orgânica em CSS3 que alterna a escala da chama entre 96% e 105% acompanhada por sombras dinâmicas de luz vermelha e âmbar.
 - **Micro-Etapas:** O texto abaixo da chama informa os passos do algoritmo:

@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-CONVERT_IMCA - Interface Gráfica Desktop (v1.4.0)
-Design Geométrico Black & Orange:
+CONVERT_IMCA - Interface Gráfica Desktop (v1.5.0)
+Design Geométrico Black & Orange Refinado:
 - Paleta Oficial: BLACK #171717 & ORANGE #F25623
-- Elementos menos arredondados (cantos sutis de 8px a 12px)
-- Tela 1: Entrada com Botão Único Hero Geométrico (Click + Drag&Drop)
-- Tela 2: Carregamento com a Chama Viva e Orange Glow
-- Tela 3: Saída com Botões Geométricos "Mostrar prévia" e "Mostrar arquivo gerado"
+- Cores unificadas nos botões de ação (#F25623)
+- Efeitos luminescentes atenuados/removidos em repouso
+- Tabela de prévia com cabeçalho fixo 100% opaco e rolagem perfeita
 =============================================================================
 """
 

@@ -18,8 +18,8 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 
-echo [1/3] Verificando PyInstaller...
-python -m pip install --upgrade pyinstaller Pillow >nul 2>&1
+echo [1/3] Verificando PyInstaller e PyWebView...
+python -m pip install --upgrade pyinstaller Pillow pywebview >nul 2>&1
 
 echo [2/3] Compilando executavel sem janela de console...
 python -m PyInstaller --noconfirm --onefile --windowed ^

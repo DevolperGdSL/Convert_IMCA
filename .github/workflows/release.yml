@@ -45,7 +45,7 @@ jobs:
       - name: Instalar Dependências de Empacotamento GUI
         shell: bash
         run: |
-          python -m pip install --upgrade pip pyinstaller Pillow
+          python -m pip install --upgrade pip pyinstaller Pillow pywebview
 
       # Build no Linux: Gera AppImage
       - name: Gerar Linux AppImage (.image / .AppImage)

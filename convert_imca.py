@@ -14,7 +14,7 @@ import zipfile
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 
 WEEKDAY_TRANSLATION = {
     "monday": "Segunda-feira",

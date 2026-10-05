@@ -15,8 +15,8 @@ if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
     exit 1
 }
 
-Write-Host "📦 [1/3] Verificando dependências de compilação..." -ForegroundColor Yellow
-python -m pip install --upgrade pyinstaller Pillow | Out-Null
+Write-Host "📦 [1/3] Verificando dependências de compilação (PyInstaller, Pillow, pywebview)..." -ForegroundColor Yellow
+python -m pip install --upgrade pyinstaller Pillow pywebview | Out-Null
 
 Write-Host "⚙️ [2/3] Executando PyInstaller (--onefile --windowed)..." -ForegroundColor Yellow
 python -m PyInstaller --noconfirm --onefile --windowed `

@@ -352,12 +352,15 @@ O projeto adota a convenção de Versionamento Semântico (`MAJOR.MINOR.PATCH`):
   - Módulo TypeScript de alta velocidade para o `cabeceira-pwa1`.
   - Scripts de automação para Windows e Linux.
   - Documentação completa em formato de livro.
-- **Versão `v1.1.0` (Versão Atual):**
-  - Criação da Interface Gráfica Desktop de tela única ([convert_imca_gui.py](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/convert_imca_gui.py)).
-  - Suporte a empacotamento autônomo Linux AppImage (`Convert_IMCA-x86_64.AppImage` e `.image`).
-  - Suporte a executável de janela para Windows (`Convert_IMCA_GUI.exe`).
-  - Criação de scripts de compilação dedicados ([build_appimage.sh](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_appimage.sh) e [build_windows_gui.bat](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_windows_gui.bat)).
-  - Atualização do pipeline de CI/CD do GitHub Actions com distribuição automática de todos os artefatos.
+- **Versão `v1.1.0`:**
+  - Criação da Interface Gráfica Desktop de tela única.
+  - Suporte a empacotamento autônomo Linux AppImage e Windows `.exe`.
+- **Versão `v1.2.0` (Versão Atual):**
+  - Reformulação visual completa da UI/UX baseada no conceito do usuário em 3 telas lineares.
+  - **Tela 1 (Entrada):** Título *Convert IMCA* com degradê quente, pílula de seleção de arquivo *BUSQUE O ARQUIVO XLSX* e botão pill laranja *Buscar arquivo*.
+  - **Tela 2 (Carregamento):** O símbolo da chama viva em alta resolução com efeito de pulso (*breathing glow* e sombras dinâmicas) e micro-etapas narrativas de processamento.
+  - **Tela 3 (Conclusão):** Dois botões principais dedicados: *mostrar prévia* (abre gaveta com tabela de eventos e métricas de compressão) e *mostrar arquivo gerado* (abre o explorador de arquivos local com o `.imca` selecionado).
+  - Atualização dos scripts de build de AppImage e Windows `.exe`.
 
 ### 6.3 Conclusão e Próximos Passos
 O conversor e o formato `.IMCA` consolidam uma ponte de altíssima eficiência entre as secretarias da igreja (que trabalham com planilhas Excel) e os voluntários na ponta final (que utilizam o aplicativo móvel `cabeceira-pwa1`). A economia de mais de 73% de armazenamento e a velocidade de leitura em milissegundos garantem uma experiência de uso fluida, estável e moderna.
@@ -366,75 +369,80 @@ O conversor e o formato `.IMCA` consolidam uma ponte de altíssima eficiência e
 
 ## Capítulo 7: A Interface Gráfica Desktop e o Empacotamento Multiplataforma (.exe e .AppImage)
 
-### 7.1 A Filosofia da Interface de Tela Única (Simplicidade e Clareza)
-Nem todos os operadores ministeriais ou membros da secretaria estão confortáveis em utilizar terminais de comando pretos com comandos como `./target/release/convert_imca --preview`. 
-
-Por essa razão, na versão **`v1.1.0`**, introduzimos a interface gráfica desktop oficial do Convert_IMCA. A filosofia que guiou sua criação é a do **"Mínimo Esforço Cognitivo"**:
-- **Uma Única Tela:** Todas as ações começam e terminam no mesmo local. Não existem janelas pop-up desnecessárias, wizards confusos de vários passos ou menus ocultos.
-- **Fluxo Linear:** 
-  1. *Selecionar a planilha* $\rightarrow$ 
-  2. *Ajustar opções se desejar* $\rightarrow$ 
-  3. *Clicar em Converter* $\rightarrow$ 
-  4. *Visualizar o resultado e abrir a pasta*.
+### 7.1 A Filosofia da Interface de Três Telas (Entrada, Carregamento e Saída)
+A experiência do usuário no Convert_IMCA foi totalmente reformulada na versão **`v1.2.0`** para traduzir com perfeição a identidade visual e o fluxo de 3 telas solicitado:
+- **Zero Poluição:** Telas limpas, sem elementos conflitantes ou caixas desnecessárias.
+- **Narrativa Clara:** Cada tela cumpre uma missão única:
+  1. *Entrada*: O usuário localiza e entrega a planilha.
+  2. *Carregamento*: A chama do Espírito Santo pulsa enquanto os algoritmos processam os dados em milissegundos.
+  3. *Conclusão*: O usuário escolhe entre inspecionar os dados gerados (*mostrar prévia*) ou revelar o arquivo no computador (*mostrar arquivo gerado*).
 
 ```mermaid
-flowchart LR
-    A["1. Selecionar Arquivo\n(Diálogo Nativo .xlsx)"] --> B["2. Opções Rápidas\n(Horário e Tradução)"]
-    B --> C["3. Clique em Converter\n(Execução < 50ms)"]
-    C --> D["4. Arquivo Transformado\n(Métricas, Prévia e Abrir Pasta)"]
+flowchart TD
+    subgraph Tela1 ["Tela 1: Entrada"]
+        T1["Convert IMCA\n(Título com Degradê de Fogo)"]
+        P1["BUSQUE O ARQUIVO XLSX\n(Pílula Arredondada / Dropzone)"]
+        B1["Buscar arquivo\n(Botão Pill Laranja Brilhante)"]
+        T1 --> P1 --> B1
+    end
+
+    subgraph Tela2 ["Tela 2: Carregamento"]
+        F2["🔥 Chama Viva Animada\n(Breathing Glow 60 FPS)"]
+        S2["Status Dinâmico:\n'Lendo planilha...' -> 'Extraindo 318 eventos...'"]
+        F2 --> S2
+    end
+
+    subgraph Tela3 ["Tela 3: Conclusão"]
+        R1["mostrar prévia\n(Gaveta com Tabela & Métricas)"]
+        R2["mostrar arquivo gerado\n(Revela na Pasta do Sistema)"]
+        R3["↺ Converter outro arquivo"]
+        R1 --- R2 --- R3
+    end
+
+    B1 --> Tela2
+    Tela2 --> Tela3
+    R3 --> Tela1
 ```
 
-### 7.2 Anatomia da Janela: O Seletor de Arquivos e os Controles de Configuração
-A interface foi construída em cima de uma paleta escura moderna (*Dark Slate 900*):
+### 7.2 Tela 1: A Pílula "BUSQUE O ARQUIVO XLSX" e o Botão "Buscar arquivo"
+A primeira tela acolhe o usuário com um fundo preto OLED absoluto (`#000000`) iluminado por uma luz ambiente suave:
+- **Título Convert IMCA:** Renderizado em tipografia forte com sombra avermelhada de neon (`#FF3B30`).
+- **Pílula de Seleção:** Um elemento horizontal arredondado no tom cinza claro (`#D0D7DE`) com o texto em vermelho bold: `BUSQUE O ARQUIVO XLSX`. Clicar na pílula ou arrastar um arquivo sobre ela aciona o leitor.
+- **Botão Buscar arquivo:** Uma pílula laranja com brilho quente que dispara o seletor nativo de arquivos do sistema operacional (GTK no Linux ou Explorer no Windows), filtrando planilhas `.xlsx`.
 
-1. **Card de Entrada de Dados:**
-   - Possui uma barra de texto com o caminho absoluto da planilha selecionada.
-   - O botão `📂 Procurar...` aciona o seletor nativo de arquivos do sistema operacional (o Explorer no Windows ou o seletor GTK/KDE no Linux), filtrando automaticamente arquivos com extensão `.xlsx`.
-2. **Card de Opções de Formatação:**
-   - **Horário Padrão:** Um campo de edição rápida preenchido por padrão com `19:30`. Caso um culto não possua hora explícita na planilha, esse valor é atribuído.
-   - **Tradução de Dias da Semana:** Uma caixa de seleção que traduz automaticamente dias em inglês (`Wednesday`, `Friday`) para nomes amigáveis em português (`Quarta-feira`, `Sexta-feira`).
-3. **Botão de Ação Primária:**
-   - Um botão verde esmeralda de ponta a ponta: `✨ CONVERTER PARA FORMATO .IMCA`. Ele possui microinterações de hover e clique para fornecer retorno tátil visual imediato.
+### 7.3 Tela 2: A Chama Viva Animada (Breathing Glow e Etapas Narrativas)
+Assim que o arquivo é selecionado, a interface transiciona instantaneamente para a tela de carregamento:
+- **A Chama:** O símbolo oficial da chama extraído em alta definição ([`assets/flame.png`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/assets/flame.png)).
+- **Animação Breathing Glow:** Um efeito de respiração orgânica em CSS3 que alterna a escala da chama entre 96% e 105% acompanhada por sombras dinâmicas de luz vermelha e âmbar.
+- **Micro-Etapas:** O texto abaixo da chama informa os passos do algoritmo:
+  - *"Lendo planilha Excel..."*
+  - *"Extraindo cultos e escalas..."*
+  - *"Normalizando datas para padrão ISO..."*
+  - *"Otimizando para formato .IMCA..."*
 
-### 7.3 O Card do Arquivo Transformado: Métricas de Economia e Prévia
-Após o clique de conversão, o card inferior da janela ganha vida e apresenta o **Arquivo Transformado**:
-- **Status Positivo:** O título se altera para `✅ Arquivo Transformado com Sucesso!` acompanhado pelo caminho do novo arquivo gerado (`.imca`) e o tempo de execução em milissegundos.
-- **Botão `📁 Abrir na Pasta`:** Dispara o gerenciador de arquivos do sistema operacional com a pasta aberta e o arquivo selecionado, permitindo ao usuário copiar o arquivo ou enviá-lo imediatamente por e-mail ou WhatsApp.
-- **Painel com Quatro Cards Numéricos:**
-  - **EVENTOS:** Quantidade de cultos e reuniões validados (ex: `318`).
-  - **TAMANHO .XLSX:** Peso da planilha de origem (ex: `96.8 KB`).
-  - **TAMANHO .IMCA:** Peso do arquivo de texto gerado (ex: `25.8 KB`).
-  - **ECONOMIA:** Percentual de redução de tamanho (ex: `-73.4%`).
-- **Tabela de Prévia Interativa (Treeview):**
-  - Exibe os primeiros 20 eventos com colunas organizadas: *Data (ISO)*, *Dia da Semana*, *Horário*, *Nome do Evento*, *Local* e *Solicitante*.
-  - Inclui barra de rolagem suave para conferência rápida antes de publicar a escala no PWA.
+### 7.4 Tela 3: As Duas Ações Principais ("mostrar prévia" e "mostrar arquivo gerado")
+Finalizada a conversão, a interface exibe as duas opções de forma direta e limpa:
 
-### 7.4 Como o Pacote Linux AppImage (.image) Funciona por Dentro (AppDir e AppRun)
-No ecossistema Linux, distribuir programas para usuários comuns é um desafio clássico devido à proliferação de distribuições (Ubuntu, Debian, Fedora, Arch, openSUSE). O formato **AppImage** resolve isso permitindo que um aplicativo rode como se fosse um `.exe` portátil do Windows: basta baixar e dar duplo clique.
+1. **Pílula `mostrar prévia`:**
+   - Abre uma elegante gaveta modal com o resumo completo da conversão:
+     - **Eventos:** 318 cultos e escalas validados.
+     - **Original:** 96.8 KB.
+     - **Formato IMCA:** 25.8 KB (**-73.4%** de redução direta e **-95.5%** comprimido na web).
+     - **Tabela:** Grade com as colunas *Data (ISO)*, *Dia*, *Hora*, *Nome do Evento* e *Local*.
+2. **Pílula `mostrar arquivo gerado`:**
+   - Dispara o gerenciador de arquivos nativo (Nautilus no Linux ou Explorer no Windows) com a pasta aberta e o arquivo `.imca` selecionado.
+   - Exibe um toast flutuante verde confirmando que o caminho foi copiado.
+3. **Link `↺ Converter outro arquivo`:**
+   - Reseta a interface suavemente e retorna para a Tela 1 para uma nova conversão.
 
-O script [build_appimage.sh](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_appimage.sh) automatiza as 5 engrenagens desse processo:
-1. **Compilação da Aplicação:** O código Python e a biblioteca gráfica são compilados em uma pasta de distribuição autônoma contendo o interpretador embutido e os binários da biblioteca gráfica Tcl/Tk.
-2. **Estrutura `AppDir`:** Monta a árvore de diretórios padrão de sistemas Unix:
-   - `AppDir/usr/bin/convert_imca_gui`: O executável da interface.
-   - `AppDir/usr/bin/convert_imca`: O executável nativo em Rust (disponível dentro do mesmo pacote!).
-   - `AppDir/convert_imca.png`: O ícone em alta resolução do aplicativo.
-   - `AppDir/convert_imca.desktop`: O arquivo de metadados exigido pelos ambientes gráficos (GNOME, KDE, XFCE).
-3. **O Script de Inicialização `AppRun`:** Um script shell que detecta a localização em que o AppImage foi montado em memória (`$APPDIR`), ajusta as variáveis de biblioteca `LD_LIBRARY_PATH`, `TCL_LIBRARY` e dispara o executável sem poluir o sistema do usuário.
-4. **Compressão SquashFS:** A ferramenta `appimagetool` empacota toda a pasta `AppDir` em uma imagem compactada SquashFS de aproximadamente **12 MB** com um cabeçalho executável ELF.
-5. **Compatibilidade Dupla:** O script cria tanto o arquivo com a extensão padrão `.AppImage` quanto com a extensão simplificada `.image` solicitada pelo operador.
+### 7.5 O Motor Gráfico PyWebView e a Ponte Bidirecional
+A interface é alimentada por um motor leve de **PyWebView**:
+- **Renderização Nativa:** No Linux utiliza o WebKitGTK 2.50 pré-instalado; no Windows utiliza o Microsoft Edge WebView2 nativo do sistema operacional.
+- **Ponte Python/JS:** Quando o usuário clica em qualquer ação no HTML/CSS, uma chamada assíncrona (`window.pywebview.api.convert_file`) é enviada diretamente ao interpretador Python, que processa a planilha com o motor de alta velocidade e devolve o resultado em JSON.
 
-### 7.5 Como o Executável Windows (.exe) é Construído Sem Dependências
-No Windows, os usuários esperam um arquivo `.exe` que possa ser aberto diretamente:
-- O script [build_windows_gui.bat](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_windows_gui.bat) utiliza os parâmetros `--onefile` e `--windowed` do PyInstaller.
-- O parâmetro `--windowed` impede que uma janela preta de prompt de comando apareça ao fundo quando a interface gráfica é iniciada.
-- O parâmetro `--icon "assets\icon.ico"` embute o ícone oficial no cabeçalho binário do Windows, aparecendo no Explorador de Arquivos e na barra de tarefas.
-- O resultado é o executável `Convert_IMCA_GUI.exe`, que funciona em qualquer computador com Windows 10 ou Windows 11 sem exigir Python, Node ou qualquer outro programa instalado.
+### 7.6 Empacotamento Linux AppImage (.image) e Executável Windows (.exe)
+Os artefatos de distribuição foram atualizados para incorporar toda a nova interface:
+- **Linux:** O script [`build_appimage.sh`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_appimage.sh) empacota o executável e a interface em um único arquivo `Convert_IMCA-x86_64.AppImage` (e atalho `Convert_IMCA.image`), que roda com duplo clique.
+- **Windows:** Os scripts [`build_windows_gui.bat`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_windows_gui.bat) e [`build_windows_gui.ps1`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_windows_gui.ps1) compilam o executável autônomo `Convert_IMCA_GUI.exe` com o ícone embutido e sem janela de console.
 
-### 7.6 A Linha de Montagem em Nuvem do GitHub Actions
-Para garantir que os executáveis de Windows e Linux estejam sempre sincronizados com o código-fonte, atualizamos o fluxo contínuo [.github/workflows/release.yml](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/.github/workflows/release.yml).
-
-Sempre que uma nova versão é publicada no repositório:
-- Um servidor Ubuntu do GitHub executa o `build_appimage.sh` e gera o `Convert_IMCA-linux-x86_64.AppImage`.
-- Um servidor Windows Server do GitHub executa a compilação do executável e gera o `Convert_IMCA_GUI-windows.exe`.
-- Uma esteira final coleta todos os arquivos e cria automaticamente uma página de **Release** oficial no GitHub com os links diretos para download.
 

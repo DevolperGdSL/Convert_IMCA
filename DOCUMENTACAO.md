@@ -47,6 +47,7 @@
   - [8.2 O Processo Criativo e a Unificação Black & Orange (#171717 e #F25623)](#82-o-processo-criativo-e-a-unificação-black--orange-171717-e-f25623)
   - [8.3 A Engenharia de Geração de Ícones Multiplataforma (PNG 512, ICO Multi-Res e SVG)](#83-a-engenharia-de-geração-de-ícones-multiplataforma-png-512-ico-multi-res-e-svg)
   - [8.4 A Integração nos Pacotes de Distribuição (.AppImage, .image e .exe)](#84-a-integração-nos-pacotes-de-distribuição-appimage-image-e-exe)
+  - [8.5 A Linha de Montagem em Nuvem do GitHub Actions e Publicação Automatizada de Releases](#85-a-linha-de-montagem-em-nuvem-do-github-actions-e-publicação-automatizada-de-releases)
 
 ---
 
@@ -523,6 +524,47 @@ O novo ícone foi integrado em todas as etapas da cadeia de montagem:
   - O utilitário PyInstaller e os scripts de compilação [`build_windows_gui.ps1`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_windows_gui.ps1) injetam o `assets/icon.ico` diretamente na tabela de recursos do executável PE32+ (`.exe`), fazendo com que o ícone apareça no Windows Explorer mesmo antes do aplicativo ser executado.
 - **Na Janela Web (Favicon e WebKit):**
   - O cabeçalho de [`assets/ui.html`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/assets/ui.html) inclui `<link rel="icon" type="image/png" href="icon.png">`, garantindo consistência até mesmo se a interface for aberta em navegadores web tradicionais.
+
+### 8.5 A Linha de Montagem em Nuvem do GitHub Actions e Publicação Automatizada de Releases
+Para que líderes de ministério, secretarias e voluntários não precisem configurar compiladores, Rust ou ambientes Python em seus computadores, o projeto conta com um esteira industrial automatizada de integração contínua (CI/CD) descrita em [`.github/workflows/release.yml`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/.github/workflows/release.yml).
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Dev as Desenvolvedor (Git Push)
+    participant GH as GitHub Actions Runner
+    participant LNX as Matriz Linux (Ubuntu)
+    participant WIN as Matriz Windows (Server)
+    participant REL as GitHub Releases (Público)
+
+    Dev->>GH: Push de Tag (ex: v1.6.0)
+    par Compilação Paralela
+        GH->>LNX: 1. Compila Rust CLI (x86_64) + Gera AppImage (.image)
+        GH->>WIN: 2. Compila Rust CLI (.exe) + Gera Windows GUI (.exe)
+    end
+    LNX-->>GH: Upload dos artefatos Linux
+    WIN-->>GH: Upload dos artefatos Windows
+    GH->>REL: Cria Release oficial anexando todos os executáveis
+    REL-->>Dev: Notificação de Release Pública Disponível
+```
+
+#### 8.5.1 Como Funciona a Matriz Multiplataforma
+O GitHub Actions aloca duas máquinas virtuais isoladas simultaneamente:
+1. **Ambiente Ubuntu (`ubuntu-latest`):**
+   - Instala o compilador Rust estável e o alvo `x86_64-unknown-linux-gnu`.
+   - Injeta via APT as bibliotecas de sistema `libfuse2` (para execução do `appimagetool` em contêineres sem FUSE) e o ecossistema `WebKitGTK` (`libwebkit2gtk-4.0-37`, `gir1.2-webkit2-4.0`).
+   - Executa o script [`build_appimage.sh`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_appimage.sh), gerando o binário portátil `Convert_IMCA-linux-x86_64.AppImage`.
+2. **Ambiente Windows (`windows-latest`):**
+   - Instala o compilador Rust estável para `x86_64-pc-windows-msvc`.
+   - Utiliza **PowerShell Core nativo (`pwsh`)** para disparar o PyInstaller com injeção do ícone multi-resolução (`assets\icon.ico`), empacotando o arquivo único sem dependências `Convert_IMCA_GUI-windows.exe`.
+
+#### 8.5.2 A Publicação na Aba de Releases
+Ao final das compilações paralelas, a ação `softprops/action-gh-release@v2` reúne todos os artefatos gerados:
+- O pacote Linux auto-executável (`.AppImage`).
+- O executável de desktop para Windows (`.exe`).
+- O utilitário de alta performance CLI em Rust para Linux e Windows.
+- E gera automaticamente as notas de lançamento (*release notes*), disponibilizando o download direto para qualquer usuário final da igreja.
+
 
 
 

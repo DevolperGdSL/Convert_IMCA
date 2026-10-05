@@ -2,6 +2,8 @@ name: Build Multiplatform Releases (Linux & Windows)
 
 on:
   push:
+    branches:
+      - main
     tags:
       - 'v*'
   workflow_dispatch:
@@ -28,6 +30,12 @@ jobs:
     steps:
       - name: Checkout Código Fonte
         uses: actions/checkout@v4
+
+      - name: Instalar Dependências do Sistema (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libfuse2 libwebkit2gtk-4.0-37 gir1.2-webkit2-4.0 python3-gi python3-gi-cairo || sudo apt-get install -y libfuse2t64 libwebkit2gtk-4.1-0 gir1.2-webkit2-4.1 python3-gi python3-gi-cairo || true
 
       - name: Instalar Rust Toolchain
         uses: dtolnay/rust-toolchain@stable
@@ -60,15 +68,15 @@ jobs:
       # Build no Windows: Gera .exe autônomo de janela
       - name: Gerar Windows Executável GUI (.exe)
         if: matrix.os == 'windows-latest'
-        shell: bash
+        shell: pwsh
         run: |
-          mkdir -p dist
-          python -m PyInstaller --noconfirm --onefile --windowed \
-            --name "Convert_IMCA_GUI-windows" \
-            --icon "assets/icon.ico" \
-            --add-data "assets;assets" \
+          New-Item -ItemType Directory -Force -Path dist | Out-Null
+          python -m PyInstaller --noconfirm --onefile --windowed `
+            --name "Convert_IMCA_GUI-windows" `
+            --icon "assets\icon.ico" `
+            --add-data "assets;assets" `
             convert_imca_gui.py
-          cp target/${{ matrix.target }}/release/${{ matrix.cli_binary }} dist/${{ matrix.cli_artifact }}
+          Copy-Item "target/${{ matrix.target }}/release/${{ matrix.cli_binary }}" -Destination "dist/${{ matrix.cli_artifact }}"
 
       - name: Upload de Artefatos Compilados
         uses: actions/upload-artifact@v4
@@ -82,7 +90,7 @@ jobs:
     name: Publicar GitHub Release
     needs: build-binaries
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
     steps:
       - name: Download de Todos os Artefatos
         uses: actions/download-artifact@v4
@@ -95,7 +103,8 @@ jobs:
         with:
           files: |
             dist-release/*
-          name: Release ${{ github.ref_name }}
+          name: Release ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || 'v1.6.0' }}
+          tag_name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || 'v1.6.0' }}
           draft: false
           prerelease: false
           generate_release_notes: true

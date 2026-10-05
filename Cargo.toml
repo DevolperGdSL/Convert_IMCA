@@ -1,0 +1,19 @@
+[package]
+name = "convert_imca"
+version = "1.0.0"
+edition = "2021"
+authors = ["Gabriel <DevolperGdSL>"]
+description = "Conversor de alta performance de planilhas Excel (.xlsx) para o formato leve .IMCA"
+license = "MIT"
+
+[dependencies]
+calamine = { version = "0.36", features = ["dates"] }
+clap = { version = "4.6", features = ["derive"] }
+chrono = "0.4"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

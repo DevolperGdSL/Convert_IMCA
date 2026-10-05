@@ -1,0 +1,63 @@
+# =============================================================================
+# SEGURANÇA E GOVERNANÇA DE ARQUIVOS - CONVERT_IMCA
+# =============================================================================
+
+# Binários e Diretórios de Compilação (Rust & C & PyInstaller)
+/target/
+/dist/
+/build/
+*.exe
+*.bin
+*.so
+*.dylib
+*.dll
+*.spec
+
+# Python Cache & Ambientes Virtuais
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+
+# Node & TypeScript (se houver ferramentas de suporte)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos Temporários de Trabalho do Excel e do Sistema
+~$*.xlsx
+~$*.xls
+*.tmp
+*.temp
+*.log
+scratch/
+
+# Segurança: Arquivos de Variáveis de Ambiente e Chaves Criptográficas
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.pfx
+
+# Arquivos Específicos de Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# Configurações de IDEs (para não vazar caminhos locais de outros desenvolvedores)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+.idea/
+*.sublime-project
+*.sublime-workspace

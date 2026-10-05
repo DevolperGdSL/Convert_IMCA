@@ -42,7 +42,11 @@
   - [7.3 O Card do Arquivo Transformado: Métricas de Economia e Prévia](#73-o-card-do-arquivo-transformado-métricas-de-economia-e-prévia)
   - [7.4 Como o Pacote Linux AppImage (.image) Funciona por Dentro (AppDir e AppRun)](#74-como-o-pacote-linux-appimage-image-funciona-por-dentro-appdir-e-apprun)
   - [7.5 Como o Executável Windows (.exe) é Construído Sem Dependências](#75-como-o-executável-windows-exe-é-construído-sem-dependências)
-  - [7.6 A Linha de Montagem em Nuvem do GitHub Actions](#76-a-linha-de-montagem-em-nuvem-do-github-actions)
+- [Capítulo 8: A Identidade Visual do Sistema — A Chama e o Calendário](#capítulo-8-a-identidade-visual-do-sistema--a-chama-e-o-calendário)
+  - [8.1 O Significado Semiótico: Da Planilha Bruta ao Fogo do Ministério](#81-o-significado-semiótico-da-planilha-bruta-ao-fogo-do-ministério)
+  - [8.2 O Processo Criativo e a Unificação Black & Orange (#171717 e #F25623)](#82-o-processo-criativo-e-a-unificação-black--orange-171717-e-f25623)
+  - [8.3 A Engenharia de Geração de Ícones Multiplataforma (PNG 512, ICO Multi-Res e SVG)](#83-a-engenharia-de-geração-de-ícones-multiplataforma-png-512-ico-multi-res-e-svg)
+  - [8.4 A Integração nos Pacotes de Distribuição (.AppImage, .image e .exe)](#84-a-integração-nos-pacotes-de-distribuição-appimage-image-e-exe)
 
 ---
 
@@ -458,5 +462,67 @@ A interface é alimentada por um motor leve e autônomo de **PyWebView**:
 Os artefatos de distribuição foram atualizados para incorporar toda a nova interface:
 - **Linux:** O script [`build_appimage.sh`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_appimage.sh) empacota o executável e a interface em um único arquivo `Convert_IMCA-x86_64.AppImage` (e atalho `Convert_IMCA.image`), que roda com duplo clique.
 - **Windows:** Os scripts [`build_windows_gui.bat`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_windows_gui.bat) e [`build_windows_gui.ps1`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_windows_gui.ps1) compilam o executável autônomo `Convert_IMCA_GUI.exe` com o ícone embutido e sem janela de console.
+
+---
+
+## Capítulo 8: A Identidade Visual do Sistema — A Chama e o Calendário
+
+### 8.1 O Significado Semiótico: Da Planilha Bruta ao Fogo do Ministério
+Todo software que aspira à excelência de uso necessita de uma identidade visual que dialogue diretamente com a sua razão de existir. O **Convert_IMCA** não é apenas um utilitário técnico de conversão binária; ele é a ponte que transporta o planejamento anual da igreja — cultos, santas ceias, vigílias e escalas de voluntários — para a palma da mão da congregação no aplicativo **cabeceira-pwa1**.
+
+A semiótica do novo ícone (`v1.6.0`) funde dois pilares fundamentais:
+1. **O Calendário (A Ordem e o Planejamento):** Representado por uma folha de calendário arquitetônica e geométrica, com suas encadernações superiores e divisão de datas. Simboliza a dedicação das secretarias e pastorais em organizar o ano de forma diligente e estruturada.
+2. **A Chama Viva (O Propósito e a Unção):** Posicionada com destaque sobre o corpo do calendário, a chama extraída do logotipo oficial do ministério transmite a mensagem central da fé: os eventos e escalas não são compromissos burocráticos frios em uma folha de Excel, mas momentos dedicados à presença viva do Espírito Santo na igreja.
+
+```mermaid
+graph TD
+    subgraph "Identidade Visual Convert_IMCA (v1.6.0)"
+        Planilha["Planilha Excel Bruta\n(Dados Frios)"] --> Fusao["Fusão de Conceitos"]
+        Calendario["Folha de Calendário\n(Ordem e Planejamento)"] --> Fusao
+        Chama["Chama Oficial do Ministério\n(Fogo e Vida do Espírito)"] --> Fusao
+        Fusao --> IconeFinal["Ícone Oficial do Sistema\n(Black #171717 & Orange #F25623)"]
+    end
+```
+
+### 8.2 O Processo Criativo e a Unificação Black & Orange (#171717 e #F25623)
+Durante o desenvolvimento da versão `1.6.0`, quatro propostas conceituais foram geradas e submetidas à análise direta do usuário:
+- *Proposta 1 (Digital Glow):* Um calendário em perspectiva 3D estilizada com grades luminosas e fogo superior.
+- *Proposta 2 (Swiss Grid):* Uma abordagem inspirada no design suíço internacionalista, com foco em tipografia técnica e fogo sutil.
+- *Proposta 3 (Minimalist Flat):* Uma silhueta vetorial monocromática plana.
+- *Proposta 4 (Oficial Integrada - Escolhida e Aprovada):* A composição geométrica perfeita que alinha o fundo escuro grafite institucional (`#171717`), o cabeçalho superior na cor sólida oficial (`#F25623`) e a própria silhueta da chama ministerial em alta definição.
+
+Essa escolha unifica todo o ecossistema visual do projeto: a tela de abertura, a animação de carregamento, os botões de ação e o ícone do sistema operacional operam sob a exata mesma linguagem visual.
+
+### 8.3 A Engenharia de Geração de Ícones Multiplataforma (PNG 512, ICO Multi-Res e SVG)
+Em sistemas operacionais modernos, um ícone de aplicativo não pode ser uma imagem comum redimensionada arbitrariamente pelo sistema. Diferentes ambientes exigem tratamentos técnicos específicos para garantir nitidez cristalina:
+
+```mermaid
+graph LR
+    Master["Icon Master\n(512x512 RGBA)"] --> PNG["assets/icon.png\n(Linux / WebKit)"]
+    Master --> ICO["assets/icon.ico\n(Multi-Res Windows)"]
+    ICO --> W1["16x16 (Taskbar mini)"]
+    ICO --> W2["32x32 (Taskbar padrão)"]
+    ICO --> W3["48x48 (Desktop médio)"]
+    ICO --> W4["64x64 (Menu Iniciar)"]
+    ICO --> W5["128x128 (HiDPI)"]
+    ICO --> W6["256x256 (4K Ultra-HD)"]
+```
+
+1. **Formato Mestre PNG (512x512 com Canal Alpha):**
+   - Salvo em [`assets/icon.png`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/assets/icon.png), renderizado com reamostragem bilinear de alta precisão (*Lanczos*), preservando transparência nos cantos chanfrados e fidelidade cromática no espectro sRGB.
+2. **Formato Windows Multi-Resolution (.ICO):**
+   - O arquivo [`assets/icon.ico`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/assets/icon.ico) é uma cápsula binária que encapsula 6 versões distintas da mesma imagem nos tamanhos: `16x16`, `32x32`, `48x48`, `64x64`, `128x128` e `256x256` pixels.
+   - Isso evita o erro comum de interpolação onde o Windows estica uma imagem pequena ou esmaga uma imagem grande, garantindo que o ícone na barra de tarefas ou na visualização em lista fique perfeitamente nítido sem serrilhamento.
+
+### 8.4 A Integração nos Pacotes de Distribuição (.AppImage, .image e .exe)
+O novo ícone foi integrado em todas as etapas da cadeia de montagem:
+- **No Linux (Desktop Entry e AppDir):**
+  - O script [`build_appimage.sh`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_appimage.sh) injeta o ícone em três locais do pacote montado: na raiz como `.DirIcon` (para os gerenciadores de arquivos do GNOME e KDE), em `convert_imca.png` na raiz do AppImage, e em `usr/share/icons/hicolor/256x256/apps/convert_imca.png`.
+  - O arquivo `convert_imca.desktop` referencia `Icon=convert_imca`, assegurando que o sistema operacional exiba o ícone correto no inicializador de aplicativos e na doca do sistema.
+- **No Windows (Compilação Nativa):**
+  - O utilitário PyInstaller e os scripts de compilação [`build_windows_gui.ps1`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_windows_gui.ps1) injetam o `assets/icon.ico` diretamente na tabela de recursos do executável PE32+ (`.exe`), fazendo com que o ícone apareça no Windows Explorer mesmo antes do aplicativo ser executado.
+- **Na Janela Web (Favicon e WebKit):**
+  - O cabeçalho de [`assets/ui.html`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/assets/ui.html) inclui `<link rel="icon" type="image/png" href="icon.png">`, garantindo consistência até mesmo se a interface for aberta em navegadores web tradicionais.
+
 
 

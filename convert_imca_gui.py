@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-CONVERT_IMCA - Interface Gráfica Desktop (v1.5.0)
+CONVERT_IMCA - Interface Gráfica Desktop (v1.6.0)
 Design Geométrico Black & Orange Refinado:
 - Paleta Oficial: BLACK #171717 & ORANGE #F25623
 - Cores unificadas nos botões de ação (#F25623)

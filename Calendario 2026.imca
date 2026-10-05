@@ -8,7 +8,7 @@
 versao=1.0
 ano=2026
 total_registros=318
-gerado_em=2026-10-05T16:41:52.964776784+00:00
+gerado_em=2026-10-05T16:56:29.629366Z
 arquivo_origem=Calendario 2026.xlsx
 aplicativo_alvo=cabeceira-pwa1
 delimitador=|
@@ -17,321 +17,321 @@ delimitador=|
 id|data|dia_semana|horario|nome|local|solicitante|status
 
 [DATA]
-ev_20251231_001|2025-12-31|Wednesday|19:30|Reveillon cabeceira|||publicado
-ev_20260102_002|2026-01-02|Friday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260103_003|2026-01-03|Saturday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260104_004|2026-01-04|Sunday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260105_005|2026-01-05|Monday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260106_006|2026-01-06|Tuesday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260107_007|2026-01-07|Wednesday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260108_008|2026-01-08|Thursday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260109_009|2026-01-09|Friday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260110_010|2026-01-10|Saturday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260111_011|2026-01-11|Sunday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260112_012|2026-01-12|Monday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260113_013|2026-01-13|Tuesday|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
-ev_20260117_014|2026-01-17|Saturday|19:30|Outnight|A definir|Inteensos|publicado
-ev_20260118_015|2026-01-18|Sunday|19:30|Outnight|A definir|Inteensos|publicado
-ev_20260122_016|2026-01-22|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20260125_017|2026-01-25|Sunday|19:30|Culto missionário|||publicado
-ev_20260129_018|2026-01-29|Thursday|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
-ev_20260201_019|2026-02-01|Sunday|19:30|Culto em Rio Brilhante|Templo|EBD|publicado
-ev_20260201_020|2026-02-01|Sunday|19:30|Retorno da EBD|Metokids|Metokids|publicado
-ev_20260201_021|2026-02-01|Sunday|19:30|Retorno do Metokids|||publicado
-ev_20260203_022|2026-02-03|Tuesday|19:30|Encontro de Alinhamento das Células|Templo|Secretaria do discipulado|publicado
-ev_20260204_023|2026-02-04|Wednesday|19:30|Célula|||publicado
-ev_20260205_024|2026-02-05|Thursday|19:30|Encontro Mensal de Mulheres||SMM|publicado
-ev_20260206_025|2026-02-06|Friday|19:30|Vigília|Templo|Intercessão|publicado
-ev_20260206_026|2026-02-06|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260207_027|2026-02-07|Saturday|19:30|Capacitação para os professores|Templo|EBD|publicado
-ev_20260207_028|2026-02-07|Saturday|19:30|Relogio de oração||Intercessão|publicado
-ev_20260208_029|2026-02-08|Sunday|19:30|Alinhamento ministerial/EBD|Templo|Pastoral|publicado
-ev_20260208_030|2026-02-08|Sunday|19:30|Cantina prol GE|A definir|Inteensos|publicado
-ev_20260211_031|2026-02-11|Wednesday|19:30|Célula|||publicado
-ev_20260214_032|2026-02-14|Saturday|19:30|Conferência de carnaval|A definir|Clam|publicado
-ev_20260215_033|2026-02-15|Sunday|19:30|Conferência de carnaval|A definir|Clam|publicado
-ev_20260218_034|2026-02-18|Wednesday|19:30|Célula|||publicado
-ev_20260220_035|2026-02-20|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260221_036|2026-02-21|Saturday|19:30|Inteensos pós acamps|Templo|Inteensos|publicado
-ev_20260222_037|2026-02-22|Sunday|19:30|Divisão de clases EBD|A definir|EBD|publicado
-ev_20260222_038|2026-02-22|Sunday|19:30|Culto missionário||Pastoral|publicado
-ev_20260225_039|2026-02-25|Wednesday|19:30|Célula|||publicado
-ev_20260226_040|2026-02-26|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20260227_041|2026-02-27|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260301_042|2026-03-01|Sunday|19:30|Campanha do agasalho|Templo|Ação Social|publicado
-ev_20260301_043|2026-03-01|Sunday|19:30|Culto em Rio Brilhante|||publicado
-ev_20260304_044|2026-03-04|Wednesday|19:30|Célula|||publicado
-ev_20260305_045|2026-03-05|Thursday|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
-ev_20260306_046|2026-03-06|Friday|19:30|Vigília|Templo|Intercessão|publicado
-ev_20260306_047|2026-03-06|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260307_048|2026-03-07|Saturday|19:30|Promoção Multimidia|||publicado
-ev_20260307_049|2026-03-07|Saturday|19:30|Relogio de oração||Intercessão|publicado
-ev_20260308_050|2026-03-08|Sunday|19:30|Culto especial dia da mulher|Varanda  + jantar|SMH|publicado
-ev_20260311_051|2026-03-11|Wednesday|19:30|Célula|||publicado
-ev_20260312_052|2026-03-12|Thursday|19:30|Encontro Mensal de Mulheres|(Dia da Mulher)|SMM|publicado
-ev_20260313_053|2026-03-13|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260314_054|2026-03-14|Saturday|19:30|Inteensos|Templo|Inteensos|publicado
-ev_20260315_055|2026-03-15|Sunday|19:30|Cantina prol GE|A definir|Inteensos|publicado
-ev_20260318_056|2026-03-18|Wednesday|19:30|Célula|||publicado
-ev_20260319_057|2026-03-19|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20260322_058|2026-03-22|Sunday|19:30|Culto missionário||Pastoral|publicado
-ev_20260323_059|2026-03-23|Monday|19:30|Clamor on line||Intercessão|publicado
-ev_20260324_060|2026-03-24|Tuesday|19:30|Clamor on line||Intercessão|publicado
-ev_20260325_061|2026-03-25|Wednesday|19:30|Clamor on line||Intercessão|publicado
-ev_20260325_062|2026-03-25|Wednesday|19:30|Célula|||publicado
-ev_20260326_063|2026-03-26|Thursday|19:30|Clamor on line||Intercessão|publicado
-ev_20260327_064|2026-03-27|Friday|19:30|Clamor on line|Quadra|Inteensos|publicado
-ev_20260327_065|2026-03-27|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260328_066|2026-03-28|Saturday|19:30|Conferência da Família|Templo|EBD- Metokids|publicado
-ev_20260329_067|2026-03-29|Sunday|19:30|Conferência da Família|Templo|EBD- Metokids|publicado
-ev_20260401_068|2026-04-01|Wednesday|19:30|Célula|||publicado
-ev_20260402_069|2026-04-02|Thursday|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
-ev_20260403_070|2026-04-03|Friday|19:30|Vigília|Templo|Intercessão|publicado
-ev_20260405_071|2026-04-05|Sunday|19:30|Café da Manha de Páscoa|Templo|Pastoral|publicado
-ev_20260405_072|2026-04-05|Sunday|19:30|Teatro de Páscoa||SMM|publicado
-ev_20260405_073|2026-04-05|Sunday|19:30|Culto em Rio Brilhante|||publicado
-ev_20260408_074|2026-04-08|Wednesday|19:30|Célula|||publicado
-ev_20260409_075|2026-04-09|Thursday|19:30|Encontro Mensal de Mulheres||SMM|publicado
-ev_20260410_076|2026-04-10|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260411_077|2026-04-11|Saturday|19:30|Relogio de oração||Intercessão|publicado
-ev_20260411_078|2026-04-11|Saturday|19:30|Inteensos|Templo|Inteensos|publicado
-ev_20260412_079|2026-04-12|Sunday|19:30|Dia do Pastor Metodista|Templo|EBD- SMM - Intercessão|publicado
-ev_20260412_080|2026-04-12|Sunday|19:30|Cantina prol GE|A definir|Inteensos|publicado
-ev_20260415_081|2026-04-15|Wednesday|19:30|Célula|||publicado
-ev_20260416_082|2026-04-16|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20260417_083|2026-04-17|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260420_084|2026-04-20|Monday|19:30|Clamor on line|||publicado
-ev_20260421_085|2026-04-21|Tuesday|19:30|Clamor on line|||publicado
-ev_20260422_086|2026-04-22|Wednesday|19:30|Célula|||publicado
-ev_20260422_087|2026-04-22|Wednesday|19:30|Clamor on line|||publicado
-ev_20260423_088|2026-04-23|Thursday|19:30|Clamor on line|||publicado
-ev_20260424_089|2026-04-24|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260424_090|2026-04-24|Friday|19:30|Clamor on line|||publicado
-ev_20260425_091|2026-04-25|Saturday|19:30|Conferência de Discipulado||Secretaria do discipulado|publicado
-ev_20260426_092|2026-04-26|Sunday|19:30|Conferência de Discipulado||Secretaria do discipulado|publicado
-ev_20260426_093|2026-04-26|Sunday|19:30|Oficina de chocolate|Metokids|Metokids|publicado
-ev_20260426_094|2026-04-26|Sunday|19:30|Culto missionário||Pastoral|publicado
-ev_20260429_095|2026-04-29|Wednesday|19:30|Célula|||publicado
-ev_20260430_096|2026-04-30|Thursday|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
-ev_20260502_097|2026-05-02|Saturday|19:30|Mães e Filhos|Igreja|Metokids|publicado
-ev_20260503_098|2026-05-03|Sunday|19:30|Culto em Rio Brilhante|||publicado
-ev_20260506_099|2026-05-06|Wednesday|19:30|Célula|||publicado
-ev_20260508_100|2026-05-08|Friday|19:30|Vigília|Templo|Intercessão|publicado
-ev_20260508_101|2026-05-08|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260509_102|2026-05-09|Saturday|19:30|Relogio de oração||Intercessão|publicado
-ev_20260510_103|2026-05-10|Sunday|19:30|Culto especial dia das mães|Varanda  + jantar|SMH|publicado
-ev_20260513_104|2026-05-13|Wednesday|19:30|Célula|||publicado
-ev_20260514_105|2026-05-14|Thursday|19:30|Encontro Mensal de Mulheres||SMM|publicado
-ev_20260515_106|2026-05-15|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260516_107|2026-05-16|Saturday|19:30|Inteensos|Templo|Inteensos|publicado
-ev_20260517_108|2026-05-17|Sunday|19:30|1º Promoção||Patrimonio|publicado
-ev_20260517_109|2026-05-17|Sunday|19:30|Cantina prol GE|A definir  doces|Inteensos|publicado
-ev_20260520_110|2026-05-20|Wednesday|19:30|Célula|||publicado
-ev_20260521_111|2026-05-21|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20260522_112|2026-05-22|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260523_113|2026-05-23|Saturday|19:30|Clamor 24 horas|Templo|Intercessão|publicado
-ev_20260524_114|2026-05-24|Sunday|19:30|Clamor 24 horas|Templo|Intercessão|publicado
-ev_20260524_115|2026-05-24|Sunday|19:30|Culto missionário||Pastoral|publicado
-ev_20260527_116|2026-05-27|Wednesday|19:30|Célula|||publicado
-ev_20260529_117|2026-05-29|Friday|19:30|Veredas|Templo|Secretaria do discipulado|publicado
-ev_20260530_118|2026-05-30|Saturday|19:30|Veredas|Templo|Secretaria do discipulado|publicado
-ev_20260531_119|2026-05-31|Sunday|19:30|Culto especial células|||publicado
-ev_20260603_120|2026-06-03|Wednesday|19:30|Célula|||publicado
-ev_20260605_121|2026-06-05|Friday|19:30|Vigília|Templo|Intercessão|publicado
-ev_20260610_122|2026-06-10|Wednesday|19:30|Célula|||publicado
-ev_20260612_123|2026-06-12|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260613_124|2026-06-13|Saturday|19:30|Jantar in love|A definir|SMH - SMM|publicado
-ev_20260613_125|2026-06-13|Saturday|19:30|Relogio de oração||Intercessão|publicado
-ev_20260614_126|2026-06-14|Sunday|19:30|Cantina prol GE|A definir|Inteensos|publicado
-ev_20260617_127|2026-06-17|Wednesday|19:30|Célula|||publicado
-ev_20260618_128|2026-06-18|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20260619_129|2026-06-19|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260620_130|2026-06-20|Saturday|19:30|Inteensos|Templo|Inteensos|publicado
-ev_20260621_131|2026-06-21|Sunday|19:30|Culto em Rio Brilhante|||publicado
-ev_20260621_132|2026-06-21|Sunday|19:30|Culto missionário - células||Pastoral|publicado
-ev_20260622_133|2026-06-22|Monday|19:30|Clamor on line|||publicado
-ev_20260623_134|2026-06-23|Tuesday|19:30|Clamor on line|||publicado
-ev_20260624_135|2026-06-24|Wednesday|19:30|Célula|||publicado
-ev_20260624_136|2026-06-24|Wednesday|19:30|Clamor on line|||publicado
-ev_20260625_137|2026-06-25|Thursday|19:30|Clamor on line|||publicado
-ev_20260626_138|2026-06-26|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260626_139|2026-06-26|Friday|19:30|Clamor on line|||publicado
-ev_20260627_140|2026-06-27|Saturday|19:30|Conferência de Louvor - 19h|Templo|Louvor|publicado
-ev_20260628_141|2026-06-28|Sunday|19:30|Conferência de Louvor (9h e 18h)|Templo|Louvor|publicado
-ev_20260701_142|2026-07-01|Wednesday|19:30|Célula|||publicado
-ev_20260702_143|2026-07-02|Thursday|19:30|Levantar a Equipe do Reencontro||Secretaria do discipulado|publicado
-ev_20260703_144|2026-07-03|Friday|19:30|Vigília|Templo|Intercessão|publicado
-ev_20260703_145|2026-07-03|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260705_146|2026-07-05|Sunday|19:30|Culto em Rio Brilhante|||publicado
-ev_20260707_147|2026-07-07|Tuesday|19:30|Reunião Reencontro com Deus|A definir|Secretaria do discipulado|publicado
-ev_20260708_148|2026-07-08|Wednesday|19:30|Célula|||publicado
-ev_20260709_149|2026-07-09|Thursday|19:30|Encontro Mensal de Mulheres|/comidas tipicas|SMM|publicado
-ev_20260710_150|2026-07-10|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260711_151|2026-07-11|Saturday|19:30|Festival de Inverno|Varanda|Secretaria do discipulado|publicado
-ev_20260711_152|2026-07-11|Saturday|19:30|Relogio de oração||Intercessão|publicado
-ev_20260712_153|2026-07-12|Sunday|19:30|Cantina prol GE|A definir|Inteensos|publicado
-ev_20260715_154|2026-07-15|Wednesday|19:30|Célula|||publicado
-ev_20260716_155|2026-07-16|Thursday|19:30|Park games|Shopping|Metokids|publicado
-ev_20260716_156|2026-07-16|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20260717_157|2026-07-17|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260718_158|2026-07-18|Saturday|19:30|Inteensos|Templo|Inteensos|publicado
-ev_20260722_159|2026-07-22|Wednesday|19:30|Célula|||publicado
-ev_20260724_160|2026-07-24|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260725_161|2026-07-25|Saturday|19:30|Conferência de homens|Templo|SMH|publicado
-ev_20260726_162|2026-07-26|Sunday|19:30|Conferência de homens|Templo|SMH|publicado
-ev_20260726_163|2026-07-26|Sunday|19:30|Culto missionário||Pastoral|publicado
-ev_20260727_164|2026-07-27|Monday|19:30|Clamor on line||Intercessão|publicado
-ev_20260728_165|2026-07-28|Tuesday|19:30|Clamor on line||Intercessão|publicado
-ev_20260729_166|2026-07-29|Wednesday|19:30|Clamor on line||Intercessão|publicado
-ev_20260729_167|2026-07-29|Wednesday|19:30|Célula|||publicado
-ev_20260730_168|2026-07-30|Thursday|19:30|Clamor on line||Intercessão|publicado
-ev_20260731_169|2026-07-31|Friday|19:30|Clamor on line||Intercessão|publicado
-ev_20260731_170|2026-07-31|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260801_171|2026-08-01|Saturday|19:30|Alinhamento das Células|Templo|Secretaria do discipulado|publicado
-ev_20260802_172|2026-08-02|Sunday|19:30|Pais e Filhos|Igreja|Metokids|publicado
-ev_20260802_173|2026-08-02|Sunday|19:30|Culto em Rio Brilhante|||publicado
-ev_20260805_174|2026-08-05|Wednesday|19:30|Célula|||publicado
-ev_20260807_175|2026-08-07|Friday|19:30|Vigília|Templo|Intercessão|publicado
-ev_20260807_176|2026-08-07|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260808_177|2026-08-08|Saturday|19:30|Formatura/EBD|Templo|EBD|publicado
-ev_20260808_178|2026-08-08|Saturday|19:30|Relogio de oração||Intercessão|publicado
-ev_20260809_179|2026-08-09|Sunday|19:30|Jantar para os Pais||SMM|publicado
-ev_20260812_180|2026-08-12|Wednesday|19:30|Célula|||publicado
-ev_20260813_181|2026-08-13|Thursday|19:30|Momento evangelistico||SMM|publicado
-ev_20260814_182|2026-08-14|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260815_183|2026-08-15|Saturday|19:30|Conferência de intercessão||Intercessão|publicado
-ev_20260816_184|2026-08-16|Sunday|19:30|Conferência de intercessão||Intercessão|publicado
-ev_20260816_185|2026-08-16|Sunday|19:30|Cantina prol GE|A definir|Inteensos|publicado
-ev_20260819_186|2026-08-19|Wednesday|19:30|Célula|||publicado
-ev_20260820_187|2026-08-20|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20260821_188|2026-08-21|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260822_189|2026-08-22|Saturday|19:30|Inteensos - metogames|Templo|Inteensos|publicado
-ev_20260823_190|2026-08-23|Sunday|19:30|Culto missionário||Pastoral|publicado
-ev_20260824_191|2026-08-24|Monday|19:30|Clamor on line|||publicado
-ev_20260825_192|2026-08-25|Tuesday|19:30|Clamor on line|||publicado
-ev_20260826_193|2026-08-26|Wednesday|19:30|Célula|||publicado
-ev_20260826_194|2026-08-26|Wednesday|19:30|Clamor on line|||publicado
-ev_20260827_195|2026-08-27|Thursday|19:30|Clamor on line|||publicado
-ev_20260828_196|2026-08-28|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260828_197|2026-08-28|Friday|19:30|Clamor on line|||publicado
-ev_20260829_198|2026-08-29|Saturday|19:30|Metogames|Templo|Inteensos|publicado
-ev_20260830_199|2026-08-30|Sunday|19:30|Concílio Local 1 - Eleição Episcopal|Templo|Pastoral|publicado
-ev_20260902_200|2026-09-02|Wednesday|19:30|Célula|||publicado
-ev_20260903_201|2026-09-03|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20260904_202|2026-09-04|Friday|19:30|Vigília reencontro|Templo|Secretaria do discipulado|publicado
-ev_20260904_203|2026-09-04|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260906_204|2026-09-06|Sunday|19:30|Culto em Rio Brilhante|||publicado
-ev_20260909_205|2026-09-09|Wednesday|19:30|Célula|||publicado
-ev_20260911_206|2026-09-11|Friday|19:30|Vigilia reencontro|Templo|Secretaria do discipulado|publicado
-ev_20260911_207|2026-09-11|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260912_208|2026-09-12|Saturday|19:30|Relogio de oração||Intercessão|publicado
-ev_20260912_209|2026-09-12|Saturday|19:30|Inteensos|Templo|Inteensos|publicado
-ev_20260912_210|2026-09-12|Saturday|19:30|Bazar||SMM|publicado
-ev_20260913_211|2026-09-13|Sunday|19:30|Cantina Prol GE|Templo /Dia do Juvenil|Inteensos|publicado
-ev_20260916_212|2026-09-16|Wednesday|19:30|Célula|||publicado
-ev_20260917_213|2026-09-17|Thursday|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
-ev_20260918_214|2026-09-18|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20260919_215|2026-09-19|Saturday|19:30|Clamor 24 horas|Templo|Intercessão|publicado
-ev_20260920_216|2026-09-20|Sunday|19:30|Jejum 6h|||publicado
-ev_20260920_217|2026-09-20|Sunday|19:30|Dia da EBD|Templo|EBD|publicado
-ev_20260920_218|2026-09-20|Sunday|19:30|Clamor 24 horas|Templo|Intercessão|publicado
-ev_20260921_219|2026-09-21|Monday|19:30|Jejum 6h|||publicado
-ev_20260922_220|2026-09-22|Tuesday|19:30|Jejum 6h|||publicado
-ev_20260923_221|2026-09-23|Wednesday|19:30|Jejum 6h|||publicado
-ev_20260923_222|2026-09-23|Wednesday|19:30|Célula|||publicado
-ev_20260924_223|2026-09-24|Thursday|19:30|Jejum 6h|||publicado
-ev_20260925_224|2026-09-25|Friday|19:30|Jejum 6h|||publicado
-ev_20260925_225|2026-09-25|Friday|19:30|Sexta cabeceira|||publicado
-ev_20260926_226|2026-09-26|Saturday|19:30|Jejum 6h|||publicado
-ev_20260926_227|2026-09-26|Saturday|19:30|Concilio Distrital|||publicado
-ev_20260927_228|2026-09-27|Sunday|19:30|Jejum 12h|||publicado
-ev_20260927_229|2026-09-27|Sunday|19:30|Culto missionário||Pastoral|publicado
-ev_20260927_230|2026-09-27|Sunday|19:30|Concilio Distrital|||publicado
-ev_20260928_231|2026-09-28|Monday|19:30|Jejum 12h|||publicado
-ev_20260929_232|2026-09-29|Tuesday|19:30|Jejum 12h|||publicado
-ev_20260930_233|2026-09-30|Wednesday|19:30|Jejum 12h|||publicado
-ev_20260930_234|2026-09-30|Wednesday|19:30|Dia do Secretário|A definir|EBD|publicado
-ev_20260930_235|2026-09-30|Wednesday|19:30|Célula|||publicado
-ev_20261001_236|2026-10-01|Thursday|19:30|Jejum 12h|||publicado
-ev_20261002_237|2026-10-02|Friday|19:30|Jejum 12h|||publicado
-ev_20261002_238|2026-10-02|Friday|19:30|Vigília|Templo|Intercessão|publicado
-ev_20261002_239|2026-10-02|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261003_240|2026-10-03|Saturday|19:30|Jejum 12h|||publicado
-ev_20261003_241|2026-10-03|Saturday|19:30|Alinhamento das Células|Templo|Secretaria do discipulado|publicado
-ev_20261004_242|2026-10-04|Sunday|19:30|Jejum 18h|||publicado
-ev_20261004_243|2026-10-04|Sunday|19:30|Culto em Rio Brilhante|||publicado
-ev_20261005_244|2026-10-05|Monday|19:30|Jejum 18h|||publicado
-ev_20261006_245|2026-10-06|Tuesday|19:30|Jejum 18h|||publicado
-ev_20261007_246|2026-10-07|Wednesday|19:30|Jejum 18h|||publicado
-ev_20261007_247|2026-10-07|Wednesday|19:30|Célula|||publicado
-ev_20261008_248|2026-10-08|Thursday|19:30|Jejum 18h|||publicado
-ev_20261008_249|2026-10-08|Thursday|19:30|Encontro Mensal de Mulheres|/ Beleza, Saude|SMM|publicado
-ev_20261009_250|2026-10-09|Friday|19:30|Jejum 18h|||publicado
-ev_20261009_251|2026-10-09|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261010_252|2026-10-10|Saturday|19:30|Jejum 18h|||publicado
-ev_20261010_253|2026-10-10|Saturday|19:30|Relogio de oração||Intercessão|publicado
-ev_20261010_254|2026-10-10|Saturday|19:30|Inteensos|Templo|Inteensos|publicado
-ev_20261011_255|2026-10-11|Sunday|19:30|Dia das Crianças/EBD|Templo|EBD|publicado
-ev_20261011_256|2026-10-11|Sunday|19:30|Cantina prol GE|A definir|Inteensos|publicado
-ev_20261012_257|2026-10-12|Monday|19:30|Pescaria|Fora das dependências da igreja|SMH|publicado
-ev_20261014_258|2026-10-14|Wednesday|19:30|Célula|||publicado
-ev_20261015_259|2026-10-15|Thursday|19:30|Dia dos professores|Metokids|SMH|publicado
-ev_20261015_260|2026-10-15|Thursday|19:30|Culto de homens|A definir|EBD|publicado
-ev_20261016_261|2026-10-16|Friday|19:30|Reencontro com Deus||Intercessão|publicado
-ev_20261016_262|2026-10-16|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261017_263|2026-10-17|Saturday|19:30|Reencontro com Deus|||publicado
-ev_20261018_264|2026-10-18|Sunday|19:30|Reencontro com Deus|||publicado
-ev_20261018_265|2026-10-18|Sunday|19:30|Culto do Bebê||SMM|publicado
-ev_20261021_266|2026-10-21|Wednesday|19:30|Célula|||publicado
-ev_20261022_267|2026-10-22|Thursday|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
-ev_20261023_268|2026-10-23|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261024_269|2026-10-24|Saturday|19:30|Marcha para Jesus|||publicado
-ev_20261025_270|2026-10-25|Sunday|19:30|Culto missionário|||publicado
-ev_20261028_271|2026-10-28|Wednesday|19:30|Célula|||publicado
-ev_20261030_272|2026-10-30|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261031_273|2026-10-31|Saturday|19:30|Outside|Igreja|Metokids|publicado
-ev_20261101_274|2026-11-01|Sunday|19:30|Culto em Rio Brilhante|||publicado
-ev_20261102_275|2026-11-02|Monday|19:30|Retiro de homens|Fora das dependências da igreja|SMH|publicado
-ev_20261104_276|2026-11-04|Wednesday|19:30|Célula|||publicado
-ev_20261106_277|2026-11-06|Friday|19:30|Vigília|Templo|Intercessão|publicado
-ev_20261106_278|2026-11-06|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261107_279|2026-11-07|Saturday|19:30|Inteensos|Templo|Inteensos|publicado
-ev_20261108_280|2026-11-08|Sunday|19:30|2º Promoção||Patrimonio|publicado
-ev_20261108_281|2026-11-08|Sunday|19:30|Cantina prol GE|A definir|Inteensos|publicado
-ev_20261111_282|2026-11-11|Wednesday|19:30|Célula|||publicado
-ev_20261112_283|2026-11-12|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20261113_284|2026-11-13|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261114_285|2026-11-14|Saturday|19:30|Fire Kids Pais e Filhos.|Igreja|Metokids|publicado
-ev_20261118_286|2026-11-18|Wednesday|19:30|Célula|||publicado
-ev_20261120_287|2026-11-20|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261121_288|2026-11-21|Saturday|19:30|Relogio de oração|Templo|Pastoral|publicado
-ev_20261123_289|2026-11-23|Monday|19:30|Clamor on line||Intercessão|publicado
-ev_20261124_290|2026-11-24|Tuesday|19:30|Clamor on line||Intercessão|publicado
-ev_20261125_291|2026-11-25|Wednesday|19:30|Clamor on line||Intercessão|publicado
-ev_20261125_292|2026-11-25|Wednesday|19:30|Célula|||publicado
-ev_20261126_293|2026-11-26|Thursday|19:30|Clamor on line||Intercessão|publicado
-ev_20261126_294|2026-11-26|Thursday|19:30|Culto de Ação de Graças|Templo|Inteensos|publicado
-ev_20261127_295|2026-11-27|Friday|19:30|Clamor on line||Intercessão|publicado
-ev_20261127_296|2026-11-27|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261128_297|2026-11-28|Saturday|19:30|Aniversário 42 anos|Templo|Pastoral|publicado
-ev_20261129_298|2026-11-29|Sunday|19:30|Aniversário 42 anos|Templo|Pastoral|publicado
-ev_20261202_299|2026-12-02|Wednesday|19:30|Célula|||publicado
-ev_20261204_300|2026-12-04|Friday|19:30|Vigília|Templo|Intercessão|publicado
-ev_20261204_301|2026-12-04|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261205_302|2026-12-05|Saturday|19:30|Inteensos|Templo|Inteensos|publicado
-ev_20261206_303|2026-12-06|Sunday|19:30|Teatro de Natal|Templo|Pastoral|publicado
-ev_20261206_304|2026-12-06|Sunday|19:30|Culto em Rio Brilhante|||publicado
-ev_20261209_305|2026-12-09|Wednesday|19:30|Célula|||publicado
-ev_20261210_306|2026-12-10|Thursday|19:30|Culto de homens|Metokids|SMH|publicado
-ev_20261211_307|2026-12-11|Friday|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
-ev_20261212_308|2026-12-12|Saturday|19:30|Dia da Bíblia|||publicado
-ev_20261212_309|2026-12-12|Saturday|19:30|Relogio de oração||Intercessão|publicado
-ev_20261212_310|2026-12-12|Saturday|19:30|Antecipação do Culto|Templo|EBD|publicado
-ev_20261213_311|2026-12-13|Sunday|19:30|Batismo e Confraternização||Secretaria do discipulado|publicado
-ev_20261219_312|2026-12-19|Saturday|19:30|Formatura/EBD|Templo|EBD|publicado
-ev_20261220_313|2026-12-20|Sunday|19:30|Concílio Local 2|Templo|Pastoral|publicado
-ev_20261220_314|2026-12-20|Sunday|19:30|Culto de Recepção de Novos Membros|Templo|Pastoral|publicado
-ev_20261231_315|2026-12-31|Thursday|19:30|Reveillon cabeceira||Pastoral|publicado
-ev_20270102_316|2027-01-02|Saturday|19:30|12 Dias de Clamor para 12 Meses de Milagres|||publicado
-ev_20270103_317|2027-01-03|Sunday|19:30|12 Dias de Clamor para 12 Meses de Milagres|||publicado
-ev_20270104_318|2027-01-04|Monday|19:30|12 Dias de Clamor para 12 Meses de Milagres|||publicado
+ev_20251231_001|2025-12-31|Quarta-feira|19:30|Reveillon cabeceira|||publicado
+ev_20260102_002|2026-01-02|Sexta-feira|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260103_003|2026-01-03|Sábado|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260104_004|2026-01-04|Domingo|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260105_005|2026-01-05|Segunda-feira|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260106_006|2026-01-06|Terça-feira|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260107_007|2026-01-07|Quarta-feira|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260108_008|2026-01-08|Quinta-feira|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260109_009|2026-01-09|Sexta-feira|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260110_010|2026-01-10|Sábado|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260111_011|2026-01-11|Domingo|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260112_012|2026-01-12|Segunda-feira|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260113_013|2026-01-13|Terça-feira|19:30|12 Dias de Clamor para 12 Meses de Milagres|Templo|Secretaria do discipulado|publicado
+ev_20260117_014|2026-01-17|Sábado|19:30|Outnight|A definir|Inteensos|publicado
+ev_20260118_015|2026-01-18|Domingo|19:30|Outnight|A definir|Inteensos|publicado
+ev_20260122_016|2026-01-22|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20260125_017|2026-01-25|Domingo|19:30|Culto missionário|||publicado
+ev_20260129_018|2026-01-29|Quinta-feira|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
+ev_20260201_019|2026-02-01|Domingo|19:30|Culto em Rio Brilhante|Templo|EBD|publicado
+ev_20260201_020|2026-02-01|Domingo|19:30|Retorno da EBD|Metokids|Metokids|publicado
+ev_20260201_021|2026-02-01|Domingo|19:30|Retorno do Metokids|||publicado
+ev_20260203_022|2026-02-03|Terça-feira|19:30|Encontro de Alinhamento das Células|Templo|Secretaria do discipulado|publicado
+ev_20260204_023|2026-02-04|Quarta-feira|19:30|Célula|||publicado
+ev_20260205_024|2026-02-05|Quinta-feira|19:30|Encontro Mensal de Mulheres||SMM|publicado
+ev_20260206_025|2026-02-06|Sexta-feira|19:30|Vigília|Templo|Intercessão|publicado
+ev_20260206_026|2026-02-06|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260207_027|2026-02-07|Sábado|19:30|Capacitação para os professores|Templo|EBD|publicado
+ev_20260207_028|2026-02-07|Sábado|19:30|Relogio de oração||Intercessão|publicado
+ev_20260208_029|2026-02-08|Domingo|19:30|Alinhamento ministerial/EBD|Templo|Pastoral|publicado
+ev_20260208_030|2026-02-08|Domingo|19:30|Cantina prol GE|A definir|Inteensos|publicado
+ev_20260211_031|2026-02-11|Quarta-feira|19:30|Célula|||publicado
+ev_20260214_032|2026-02-14|Sábado|19:30|Conferência de carnaval|A definir|Clam|publicado
+ev_20260215_033|2026-02-15|Domingo|19:30|Conferência de carnaval|A definir|Clam|publicado
+ev_20260218_034|2026-02-18|Quarta-feira|19:30|Célula|||publicado
+ev_20260220_035|2026-02-20|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260221_036|2026-02-21|Sábado|19:30|Inteensos pós acamps|Templo|Inteensos|publicado
+ev_20260222_037|2026-02-22|Domingo|19:30|Divisão de clases EBD|A definir|EBD|publicado
+ev_20260222_038|2026-02-22|Domingo|19:30|Culto missionário||Pastoral|publicado
+ev_20260225_039|2026-02-25|Quarta-feira|19:30|Célula|||publicado
+ev_20260226_040|2026-02-26|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20260227_041|2026-02-27|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260301_042|2026-03-01|Domingo|19:30|Campanha do agasalho|Templo|Ação Social|publicado
+ev_20260301_043|2026-03-01|Domingo|19:30|Culto em Rio Brilhante|||publicado
+ev_20260304_044|2026-03-04|Quarta-feira|19:30|Célula|||publicado
+ev_20260305_045|2026-03-05|Quinta-feira|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
+ev_20260306_046|2026-03-06|Sexta-feira|19:30|Vigília|Templo|Intercessão|publicado
+ev_20260306_047|2026-03-06|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260307_048|2026-03-07|Sábado|19:30|Promoção Multimidia|||publicado
+ev_20260307_049|2026-03-07|Sábado|19:30|Relogio de oração||Intercessão|publicado
+ev_20260308_050|2026-03-08|Domingo|19:30|Culto especial dia da mulher|Varanda  + jantar|SMH|publicado
+ev_20260311_051|2026-03-11|Quarta-feira|19:30|Célula|||publicado
+ev_20260312_052|2026-03-12|Quinta-feira|19:30|Encontro Mensal de Mulheres|(Dia da Mulher)|SMM|publicado
+ev_20260313_053|2026-03-13|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260314_054|2026-03-14|Sábado|19:30|Inteensos|Templo|Inteensos|publicado
+ev_20260315_055|2026-03-15|Domingo|19:30|Cantina prol GE|A definir|Inteensos|publicado
+ev_20260318_056|2026-03-18|Quarta-feira|19:30|Célula|||publicado
+ev_20260319_057|2026-03-19|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20260322_058|2026-03-22|Domingo|19:30|Culto missionário||Pastoral|publicado
+ev_20260323_059|2026-03-23|Segunda-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20260324_060|2026-03-24|Terça-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20260325_061|2026-03-25|Quarta-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20260325_062|2026-03-25|Quarta-feira|19:30|Célula|||publicado
+ev_20260326_063|2026-03-26|Quinta-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20260327_064|2026-03-27|Sexta-feira|19:30|Clamor on line|Quadra|Inteensos|publicado
+ev_20260327_065|2026-03-27|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260328_066|2026-03-28|Sábado|19:30|Conferência da Família|Templo|EBD- Metokids|publicado
+ev_20260329_067|2026-03-29|Domingo|19:30|Conferência da Família|Templo|EBD- Metokids|publicado
+ev_20260401_068|2026-04-01|Quarta-feira|19:30|Célula|||publicado
+ev_20260402_069|2026-04-02|Quinta-feira|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
+ev_20260403_070|2026-04-03|Sexta-feira|19:30|Vigília|Templo|Intercessão|publicado
+ev_20260405_071|2026-04-05|Domingo|19:30|Café da Manha de Páscoa|Templo|Pastoral|publicado
+ev_20260405_072|2026-04-05|Domingo|19:30|Teatro de Páscoa||SMM|publicado
+ev_20260405_073|2026-04-05|Domingo|19:30|Culto em Rio Brilhante|||publicado
+ev_20260408_074|2026-04-08|Quarta-feira|19:30|Célula|||publicado
+ev_20260409_075|2026-04-09|Quinta-feira|19:30|Encontro Mensal de Mulheres||SMM|publicado
+ev_20260410_076|2026-04-10|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260411_077|2026-04-11|Sábado|19:30|Relogio de oração||Intercessão|publicado
+ev_20260411_078|2026-04-11|Sábado|19:30|Inteensos|Templo|Inteensos|publicado
+ev_20260412_079|2026-04-12|Domingo|19:30|Dia do Pastor Metodista|Templo|EBD- SMM - Intercessão|publicado
+ev_20260412_080|2026-04-12|Domingo|19:30|Cantina prol GE|A definir|Inteensos|publicado
+ev_20260415_081|2026-04-15|Quarta-feira|19:30|Célula|||publicado
+ev_20260416_082|2026-04-16|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20260417_083|2026-04-17|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260420_084|2026-04-20|Segunda-feira|19:30|Clamor on line|||publicado
+ev_20260421_085|2026-04-21|Terça-feira|19:30|Clamor on line|||publicado
+ev_20260422_086|2026-04-22|Quarta-feira|19:30|Célula|||publicado
+ev_20260422_087|2026-04-22|Quarta-feira|19:30|Clamor on line|||publicado
+ev_20260423_088|2026-04-23|Quinta-feira|19:30|Clamor on line|||publicado
+ev_20260424_089|2026-04-24|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260424_090|2026-04-24|Sexta-feira|19:30|Clamor on line|||publicado
+ev_20260425_091|2026-04-25|Sábado|19:30|Conferência de Discipulado||Secretaria do discipulado|publicado
+ev_20260426_092|2026-04-26|Domingo|19:30|Conferência de Discipulado||Secretaria do discipulado|publicado
+ev_20260426_093|2026-04-26|Domingo|19:30|Oficina de chocolate|Metokids|Metokids|publicado
+ev_20260426_094|2026-04-26|Domingo|19:30|Culto missionário||Pastoral|publicado
+ev_20260429_095|2026-04-29|Quarta-feira|19:30|Célula|||publicado
+ev_20260430_096|2026-04-30|Quinta-feira|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
+ev_20260502_097|2026-05-02|Sábado|19:30|Mães e Filhos|Igreja|Metokids|publicado
+ev_20260503_098|2026-05-03|Domingo|19:30|Culto em Rio Brilhante|||publicado
+ev_20260506_099|2026-05-06|Quarta-feira|19:30|Célula|||publicado
+ev_20260508_100|2026-05-08|Sexta-feira|19:30|Vigília|Templo|Intercessão|publicado
+ev_20260508_101|2026-05-08|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260509_102|2026-05-09|Sábado|19:30|Relogio de oração||Intercessão|publicado
+ev_20260510_103|2026-05-10|Domingo|19:30|Culto especial dia das mães|Varanda  + jantar|SMH|publicado
+ev_20260513_104|2026-05-13|Quarta-feira|19:30|Célula|||publicado
+ev_20260514_105|2026-05-14|Quinta-feira|19:30|Encontro Mensal de Mulheres||SMM|publicado
+ev_20260515_106|2026-05-15|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260516_107|2026-05-16|Sábado|19:30|Inteensos|Templo|Inteensos|publicado
+ev_20260517_108|2026-05-17|Domingo|19:30|1º Promoção||Patrimonio|publicado
+ev_20260517_109|2026-05-17|Domingo|19:30|Cantina prol GE|A definir  doces|Inteensos|publicado
+ev_20260520_110|2026-05-20|Quarta-feira|19:30|Célula|||publicado
+ev_20260521_111|2026-05-21|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20260522_112|2026-05-22|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260523_113|2026-05-23|Sábado|19:30|Clamor 24 horas|Templo|Intercessão|publicado
+ev_20260524_114|2026-05-24|Domingo|19:30|Clamor 24 horas|Templo|Intercessão|publicado
+ev_20260524_115|2026-05-24|Domingo|19:30|Culto missionário||Pastoral|publicado
+ev_20260527_116|2026-05-27|Quarta-feira|19:30|Célula|||publicado
+ev_20260529_117|2026-05-29|Sexta-feira|19:30|Veredas|Templo|Secretaria do discipulado|publicado
+ev_20260530_118|2026-05-30|Sábado|19:30|Veredas|Templo|Secretaria do discipulado|publicado
+ev_20260531_119|2026-05-31|Domingo|19:30|Culto especial células|||publicado
+ev_20260603_120|2026-06-03|Quarta-feira|19:30|Célula|||publicado
+ev_20260605_121|2026-06-05|Sexta-feira|19:30|Vigília|Templo|Intercessão|publicado
+ev_20260610_122|2026-06-10|Quarta-feira|19:30|Célula|||publicado
+ev_20260612_123|2026-06-12|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260613_124|2026-06-13|Sábado|19:30|Jantar in love|A definir|SMH - SMM|publicado
+ev_20260613_125|2026-06-13|Sábado|19:30|Relogio de oração||Intercessão|publicado
+ev_20260614_126|2026-06-14|Domingo|19:30|Cantina prol GE|A definir|Inteensos|publicado
+ev_20260617_127|2026-06-17|Quarta-feira|19:30|Célula|||publicado
+ev_20260618_128|2026-06-18|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20260619_129|2026-06-19|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260620_130|2026-06-20|Sábado|19:30|Inteensos|Templo|Inteensos|publicado
+ev_20260621_131|2026-06-21|Domingo|19:30|Culto em Rio Brilhante|||publicado
+ev_20260621_132|2026-06-21|Domingo|19:30|Culto missionário - células||Pastoral|publicado
+ev_20260622_133|2026-06-22|Segunda-feira|19:30|Clamor on line|||publicado
+ev_20260623_134|2026-06-23|Terça-feira|19:30|Clamor on line|||publicado
+ev_20260624_135|2026-06-24|Quarta-feira|19:30|Célula|||publicado
+ev_20260624_136|2026-06-24|Quarta-feira|19:30|Clamor on line|||publicado
+ev_20260625_137|2026-06-25|Quinta-feira|19:30|Clamor on line|||publicado
+ev_20260626_138|2026-06-26|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260626_139|2026-06-26|Sexta-feira|19:30|Clamor on line|||publicado
+ev_20260627_140|2026-06-27|Sábado|19:30|Conferência de Louvor - 19h|Templo|Louvor|publicado
+ev_20260628_141|2026-06-28|Domingo|19:30|Conferência de Louvor (9h e 18h)|Templo|Louvor|publicado
+ev_20260701_142|2026-07-01|Quarta-feira|19:30|Célula|||publicado
+ev_20260702_143|2026-07-02|Quinta-feira|19:30|Levantar a Equipe do Reencontro||Secretaria do discipulado|publicado
+ev_20260703_144|2026-07-03|Sexta-feira|19:30|Vigília|Templo|Intercessão|publicado
+ev_20260703_145|2026-07-03|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260705_146|2026-07-05|Domingo|19:30|Culto em Rio Brilhante|||publicado
+ev_20260707_147|2026-07-07|Terça-feira|19:30|Reunião Reencontro com Deus|A definir|Secretaria do discipulado|publicado
+ev_20260708_148|2026-07-08|Quarta-feira|19:30|Célula|||publicado
+ev_20260709_149|2026-07-09|Quinta-feira|19:30|Encontro Mensal de Mulheres|/comidas tipicas|SMM|publicado
+ev_20260710_150|2026-07-10|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260711_151|2026-07-11|Sábado|19:30|Festival de Inverno|Varanda|Secretaria do discipulado|publicado
+ev_20260711_152|2026-07-11|Sábado|19:30|Relogio de oração||Intercessão|publicado
+ev_20260712_153|2026-07-12|Domingo|19:30|Cantina prol GE|A definir|Inteensos|publicado
+ev_20260715_154|2026-07-15|Quarta-feira|19:30|Célula|||publicado
+ev_20260716_155|2026-07-16|Quinta-feira|19:30|Park games|Shopping|Metokids|publicado
+ev_20260716_156|2026-07-16|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20260717_157|2026-07-17|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260718_158|2026-07-18|Sábado|19:30|Inteensos|Templo|Inteensos|publicado
+ev_20260722_159|2026-07-22|Quarta-feira|19:30|Célula|||publicado
+ev_20260724_160|2026-07-24|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260725_161|2026-07-25|Sábado|19:30|Conferência de homens|Templo|SMH|publicado
+ev_20260726_162|2026-07-26|Domingo|19:30|Conferência de homens|Templo|SMH|publicado
+ev_20260726_163|2026-07-26|Domingo|19:30|Culto missionário||Pastoral|publicado
+ev_20260727_164|2026-07-27|Segunda-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20260728_165|2026-07-28|Terça-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20260729_166|2026-07-29|Quarta-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20260729_167|2026-07-29|Quarta-feira|19:30|Célula|||publicado
+ev_20260730_168|2026-07-30|Quinta-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20260731_169|2026-07-31|Sexta-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20260731_170|2026-07-31|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260801_171|2026-08-01|Sábado|19:30|Alinhamento das Células|Templo|Secretaria do discipulado|publicado
+ev_20260802_172|2026-08-02|Domingo|19:30|Pais e Filhos|Igreja|Metokids|publicado
+ev_20260802_173|2026-08-02|Domingo|19:30|Culto em Rio Brilhante|||publicado
+ev_20260805_174|2026-08-05|Quarta-feira|19:30|Célula|||publicado
+ev_20260807_175|2026-08-07|Sexta-feira|19:30|Vigília|Templo|Intercessão|publicado
+ev_20260807_176|2026-08-07|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260808_177|2026-08-08|Sábado|19:30|Formatura/EBD|Templo|EBD|publicado
+ev_20260808_178|2026-08-08|Sábado|19:30|Relogio de oração||Intercessão|publicado
+ev_20260809_179|2026-08-09|Domingo|19:30|Jantar para os Pais||SMM|publicado
+ev_20260812_180|2026-08-12|Quarta-feira|19:30|Célula|||publicado
+ev_20260813_181|2026-08-13|Quinta-feira|19:30|Momento evangelistico||SMM|publicado
+ev_20260814_182|2026-08-14|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260815_183|2026-08-15|Sábado|19:30|Conferência de intercessão||Intercessão|publicado
+ev_20260816_184|2026-08-16|Domingo|19:30|Conferência de intercessão||Intercessão|publicado
+ev_20260816_185|2026-08-16|Domingo|19:30|Cantina prol GE|A definir|Inteensos|publicado
+ev_20260819_186|2026-08-19|Quarta-feira|19:30|Célula|||publicado
+ev_20260820_187|2026-08-20|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20260821_188|2026-08-21|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260822_189|2026-08-22|Sábado|19:30|Inteensos - metogames|Templo|Inteensos|publicado
+ev_20260823_190|2026-08-23|Domingo|19:30|Culto missionário||Pastoral|publicado
+ev_20260824_191|2026-08-24|Segunda-feira|19:30|Clamor on line|||publicado
+ev_20260825_192|2026-08-25|Terça-feira|19:30|Clamor on line|||publicado
+ev_20260826_193|2026-08-26|Quarta-feira|19:30|Célula|||publicado
+ev_20260826_194|2026-08-26|Quarta-feira|19:30|Clamor on line|||publicado
+ev_20260827_195|2026-08-27|Quinta-feira|19:30|Clamor on line|||publicado
+ev_20260828_196|2026-08-28|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260828_197|2026-08-28|Sexta-feira|19:30|Clamor on line|||publicado
+ev_20260829_198|2026-08-29|Sábado|19:30|Metogames|Templo|Inteensos|publicado
+ev_20260830_199|2026-08-30|Domingo|19:30|Concílio Local 1 - Eleição Episcopal|Templo|Pastoral|publicado
+ev_20260902_200|2026-09-02|Quarta-feira|19:30|Célula|||publicado
+ev_20260903_201|2026-09-03|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20260904_202|2026-09-04|Sexta-feira|19:30|Vigília reencontro|Templo|Secretaria do discipulado|publicado
+ev_20260904_203|2026-09-04|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260906_204|2026-09-06|Domingo|19:30|Culto em Rio Brilhante|||publicado
+ev_20260909_205|2026-09-09|Quarta-feira|19:30|Célula|||publicado
+ev_20260911_206|2026-09-11|Sexta-feira|19:30|Vigilia reencontro|Templo|Secretaria do discipulado|publicado
+ev_20260911_207|2026-09-11|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260912_208|2026-09-12|Sábado|19:30|Relogio de oração||Intercessão|publicado
+ev_20260912_209|2026-09-12|Sábado|19:30|Inteensos|Templo|Inteensos|publicado
+ev_20260912_210|2026-09-12|Sábado|19:30|Bazar||SMM|publicado
+ev_20260913_211|2026-09-13|Domingo|19:30|Cantina Prol GE|Templo /Dia do Juvenil|Inteensos|publicado
+ev_20260916_212|2026-09-16|Quarta-feira|19:30|Célula|||publicado
+ev_20260917_213|2026-09-17|Quinta-feira|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
+ev_20260918_214|2026-09-18|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20260919_215|2026-09-19|Sábado|19:30|Clamor 24 horas|Templo|Intercessão|publicado
+ev_20260920_216|2026-09-20|Domingo|19:30|Jejum 6h|||publicado
+ev_20260920_217|2026-09-20|Domingo|19:30|Dia da EBD|Templo|EBD|publicado
+ev_20260920_218|2026-09-20|Domingo|19:30|Clamor 24 horas|Templo|Intercessão|publicado
+ev_20260921_219|2026-09-21|Segunda-feira|19:30|Jejum 6h|||publicado
+ev_20260922_220|2026-09-22|Terça-feira|19:30|Jejum 6h|||publicado
+ev_20260923_221|2026-09-23|Quarta-feira|19:30|Jejum 6h|||publicado
+ev_20260923_222|2026-09-23|Quarta-feira|19:30|Célula|||publicado
+ev_20260924_223|2026-09-24|Quinta-feira|19:30|Jejum 6h|||publicado
+ev_20260925_224|2026-09-25|Sexta-feira|19:30|Jejum 6h|||publicado
+ev_20260925_225|2026-09-25|Sexta-feira|19:30|Sexta cabeceira|||publicado
+ev_20260926_226|2026-09-26|Sábado|19:30|Jejum 6h|||publicado
+ev_20260926_227|2026-09-26|Sábado|19:30|Concilio Distrital|||publicado
+ev_20260927_228|2026-09-27|Domingo|19:30|Jejum 12h|||publicado
+ev_20260927_229|2026-09-27|Domingo|19:30|Culto missionário||Pastoral|publicado
+ev_20260927_230|2026-09-27|Domingo|19:30|Concilio Distrital|||publicado
+ev_20260928_231|2026-09-28|Segunda-feira|19:30|Jejum 12h|||publicado
+ev_20260929_232|2026-09-29|Terça-feira|19:30|Jejum 12h|||publicado
+ev_20260930_233|2026-09-30|Quarta-feira|19:30|Jejum 12h|||publicado
+ev_20260930_234|2026-09-30|Quarta-feira|19:30|Dia do Secretário|A definir|EBD|publicado
+ev_20260930_235|2026-09-30|Quarta-feira|19:30|Célula|||publicado
+ev_20261001_236|2026-10-01|Quinta-feira|19:30|Jejum 12h|||publicado
+ev_20261002_237|2026-10-02|Sexta-feira|19:30|Jejum 12h|||publicado
+ev_20261002_238|2026-10-02|Sexta-feira|19:30|Vigília|Templo|Intercessão|publicado
+ev_20261002_239|2026-10-02|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261003_240|2026-10-03|Sábado|19:30|Jejum 12h|||publicado
+ev_20261003_241|2026-10-03|Sábado|19:30|Alinhamento das Células|Templo|Secretaria do discipulado|publicado
+ev_20261004_242|2026-10-04|Domingo|19:30|Jejum 18h|||publicado
+ev_20261004_243|2026-10-04|Domingo|19:30|Culto em Rio Brilhante|||publicado
+ev_20261005_244|2026-10-05|Segunda-feira|19:30|Jejum 18h|||publicado
+ev_20261006_245|2026-10-06|Terça-feira|19:30|Jejum 18h|||publicado
+ev_20261007_246|2026-10-07|Quarta-feira|19:30|Jejum 18h|||publicado
+ev_20261007_247|2026-10-07|Quarta-feira|19:30|Célula|||publicado
+ev_20261008_248|2026-10-08|Quinta-feira|19:30|Jejum 18h|||publicado
+ev_20261008_249|2026-10-08|Quinta-feira|19:30|Encontro Mensal de Mulheres|/ Beleza, Saude|SMM|publicado
+ev_20261009_250|2026-10-09|Sexta-feira|19:30|Jejum 18h|||publicado
+ev_20261009_251|2026-10-09|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261010_252|2026-10-10|Sábado|19:30|Jejum 18h|||publicado
+ev_20261010_253|2026-10-10|Sábado|19:30|Relogio de oração||Intercessão|publicado
+ev_20261010_254|2026-10-10|Sábado|19:30|Inteensos|Templo|Inteensos|publicado
+ev_20261011_255|2026-10-11|Domingo|19:30|Dia das Crianças/EBD|Templo|EBD|publicado
+ev_20261011_256|2026-10-11|Domingo|19:30|Cantina prol GE|A definir|Inteensos|publicado
+ev_20261012_257|2026-10-12|Segunda-feira|19:30|Pescaria|Fora das dependências da igreja|SMH|publicado
+ev_20261014_258|2026-10-14|Quarta-feira|19:30|Célula|||publicado
+ev_20261015_259|2026-10-15|Quinta-feira|19:30|Dia dos professores|Metokids|SMH|publicado
+ev_20261015_260|2026-10-15|Quinta-feira|19:30|Culto de homens|A definir|EBD|publicado
+ev_20261016_261|2026-10-16|Sexta-feira|19:30|Reencontro com Deus||Intercessão|publicado
+ev_20261016_262|2026-10-16|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261017_263|2026-10-17|Sábado|19:30|Reencontro com Deus|||publicado
+ev_20261018_264|2026-10-18|Domingo|19:30|Reencontro com Deus|||publicado
+ev_20261018_265|2026-10-18|Domingo|19:30|Culto do Bebê||SMM|publicado
+ev_20261021_266|2026-10-21|Quarta-feira|19:30|Célula|||publicado
+ev_20261022_267|2026-10-22|Quinta-feira|19:30|Futebol|Fora das dependências da igreja|SMH|publicado
+ev_20261023_268|2026-10-23|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261024_269|2026-10-24|Sábado|19:30|Marcha para Jesus|||publicado
+ev_20261025_270|2026-10-25|Domingo|19:30|Culto missionário|||publicado
+ev_20261028_271|2026-10-28|Quarta-feira|19:30|Célula|||publicado
+ev_20261030_272|2026-10-30|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261031_273|2026-10-31|Sábado|19:30|Outside|Igreja|Metokids|publicado
+ev_20261101_274|2026-11-01|Domingo|19:30|Culto em Rio Brilhante|||publicado
+ev_20261102_275|2026-11-02|Segunda-feira|19:30|Retiro de homens|Fora das dependências da igreja|SMH|publicado
+ev_20261104_276|2026-11-04|Quarta-feira|19:30|Célula|||publicado
+ev_20261106_277|2026-11-06|Sexta-feira|19:30|Vigília|Templo|Intercessão|publicado
+ev_20261106_278|2026-11-06|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261107_279|2026-11-07|Sábado|19:30|Inteensos|Templo|Inteensos|publicado
+ev_20261108_280|2026-11-08|Domingo|19:30|2º Promoção||Patrimonio|publicado
+ev_20261108_281|2026-11-08|Domingo|19:30|Cantina prol GE|A definir|Inteensos|publicado
+ev_20261111_282|2026-11-11|Quarta-feira|19:30|Célula|||publicado
+ev_20261112_283|2026-11-12|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20261113_284|2026-11-13|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261114_285|2026-11-14|Sábado|19:30|Fire Kids Pais e Filhos.|Igreja|Metokids|publicado
+ev_20261118_286|2026-11-18|Quarta-feira|19:30|Célula|||publicado
+ev_20261120_287|2026-11-20|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261121_288|2026-11-21|Sábado|19:30|Relogio de oração|Templo|Pastoral|publicado
+ev_20261123_289|2026-11-23|Segunda-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20261124_290|2026-11-24|Terça-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20261125_291|2026-11-25|Quarta-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20261125_292|2026-11-25|Quarta-feira|19:30|Célula|||publicado
+ev_20261126_293|2026-11-26|Quinta-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20261126_294|2026-11-26|Quinta-feira|19:30|Culto de Ação de Graças|Templo|Inteensos|publicado
+ev_20261127_295|2026-11-27|Sexta-feira|19:30|Clamor on line||Intercessão|publicado
+ev_20261127_296|2026-11-27|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261128_297|2026-11-28|Sábado|19:30|Aniversário 42 anos|Templo|Pastoral|publicado
+ev_20261129_298|2026-11-29|Domingo|19:30|Aniversário 42 anos|Templo|Pastoral|publicado
+ev_20261202_299|2026-12-02|Quarta-feira|19:30|Célula|||publicado
+ev_20261204_300|2026-12-04|Sexta-feira|19:30|Vigília|Templo|Intercessão|publicado
+ev_20261204_301|2026-12-04|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261205_302|2026-12-05|Sábado|19:30|Inteensos|Templo|Inteensos|publicado
+ev_20261206_303|2026-12-06|Domingo|19:30|Teatro de Natal|Templo|Pastoral|publicado
+ev_20261206_304|2026-12-06|Domingo|19:30|Culto em Rio Brilhante|||publicado
+ev_20261209_305|2026-12-09|Quarta-feira|19:30|Célula|||publicado
+ev_20261210_306|2026-12-10|Quinta-feira|19:30|Culto de homens|Metokids|SMH|publicado
+ev_20261211_307|2026-12-11|Sexta-feira|19:30|Sexta cabeceira|Quadra|Inteensos|publicado
+ev_20261212_308|2026-12-12|Sábado|19:30|Dia da Bíblia|||publicado
+ev_20261212_309|2026-12-12|Sábado|19:30|Relogio de oração||Intercessão|publicado
+ev_20261212_310|2026-12-12|Sábado|19:30|Antecipação do Culto|Templo|EBD|publicado
+ev_20261213_311|2026-12-13|Domingo|19:30|Batismo e Confraternização||Secretaria do discipulado|publicado
+ev_20261219_312|2026-12-19|Sábado|19:30|Formatura/EBD|Templo|EBD|publicado
+ev_20261220_313|2026-12-20|Domingo|19:30|Concílio Local 2|Templo|Pastoral|publicado
+ev_20261220_314|2026-12-20|Domingo|19:30|Culto de Recepção de Novos Membros|Templo|Pastoral|publicado
+ev_20261231_315|2026-12-31|Quinta-feira|19:30|Reveillon cabeceira||Pastoral|publicado
+ev_20270102_316|2027-01-02|Sábado|19:30|12 Dias de Clamor para 12 Meses de Milagres|||publicado
+ev_20270103_317|2027-01-03|Domingo|19:30|12 Dias de Clamor para 12 Meses de Milagres|||publicado
+ev_20270104_318|2027-01-04|Segunda-feira|19:30|12 Dias de Clamor para 12 Meses de Milagres|||publicado

@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-CONVERT_IMCA - Interface Gráfica Desktop (v1.3.0)
-UX/UI Refinada (Editorial Dark & Terracota):
-- Tela 1: Entrada com Botão Único Hero "BUSCAR ARQUIVO XLSX" (Click + Drag&Drop)
-- Tela 2: Carregamento com a Chama Viva Animada (Breathing Glow)
-- Tela 3: Saída com Pílulas "Mostrar prévia" e "Mostrar arquivo gerado"
+CONVERT_IMCA - Interface Gráfica Desktop (v1.4.0)
+Design Geométrico Black & Orange:
+- Paleta Oficial: BLACK #171717 & ORANGE #F25623
+- Elementos menos arredondados (cantos sutis de 8px a 12px)
+- Tela 1: Entrada com Botão Único Hero Geométrico (Click + Drag&Drop)
+- Tela 2: Carregamento com a Chama Viva e Orange Glow
+- Tela 3: Saída com Botões Geométricos "Mostrar prévia" e "Mostrar arquivo gerado"
 =============================================================================
 """
 
@@ -153,7 +155,7 @@ def main():
         width=780,
         height=680,
         min_size=(680, 560),
-        background_color="#151619",
+        background_color="#171717",
         resizable=True
     )
     api.set_window(window)

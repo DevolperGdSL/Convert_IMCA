@@ -357,11 +357,15 @@ O projeto adota a convenção de Versionamento Semântico (`MAJOR.MINOR.PATCH`):
   - Suporte a empacotamento autônomo Linux AppImage e Windows `.exe`.
 - **Versão `v1.2.0`:**
   - Reformulação visual com fluxo de 3 telas lineares e introdução da animação da chama viva com *breathing glow*.
-- **Versão `v1.3.0` (Versão Atual):**
-  - **Refinamento Exclusivo da Tela Inicial:** Unificação da entrada em **um único botão hero** (`BUSCAR ARQUIVO XLSX`), eliminando elementos duplicados e integrando clique e Drag & Drop na mesma ação.
-  - **Identidade Visual Editorial Dark & Terracota:** Adoção da paleta matte charcoal (`#151619`), acentos em terracota sofisticado (`#B83E44`), barras verticais indicadoras (`|`) e tipografia moderna de alto contraste.
-  - Preservação integral das telas 2 (chama viva com micro-etapas) e 3 (prévia interativa e revelação do arquivo gerado no SO).
-  - Atualização dos executáveis de distribuição e empacotamento Linux AppImage.
+- **Versão `v1.3.0`:**
+  - Refinamento da tela inicial com botão único hero e correção de robustez no seletor nativo do sistema operacional.
+- **Versão `v1.4.0` (Versão Atual):**
+  - **Identidade Visual Black & Orange:** Fundo em preto fosco profundo (`BLACK #171717`), acentos e botão principal em laranja fogo vibrante (`ORANGE #F25623`), criando um contraste arrojado e moderno.
+  - **Elementos Menos Arredondados (Design Geométrico):** Substituição das antigas formas em pílula oval (`border-radius: 9999px`) por cartões e botões com cantos sutis e arquitetônicos (`border-radius: 8px` a `12px`).
+  - **Tela 1:** Botão hero retangular em degradê Orange (`#F25623` a `#D84210`) com cantos de 12px, ícone geométrico de upload e Drag & Drop ativo.
+  - **Tela 2:** A chama viva animada em alta resolução com reflexos e sombras quentes em `#F25623`.
+  - **Tela 3:** Dois cartões retangulares estilizados (`mostrar prévia` em grafite `#242424` e `mostrar arquivo gerado` em Orange `#F25623`) com cantos de 12px.
+  - Atualização dos pacotes autônomos Linux AppImage e motor nativo Rust.
 
 ### 6.3 Conclusão e Próximos Passos
 O conversor e o formato `.IMCA` consolidam uma ponte de altíssima eficiência entre as secretarias da igreja (que trabalham com planilhas Excel) e os voluntários na ponta final (que utilizam o aplicativo móvel `cabeceira-pwa1`). A economia de mais de 73% de armazenamento e a velocidade de leitura em milissegundos garantem uma experiência de uso fluida, estável e moderna.
@@ -371,31 +375,31 @@ O conversor e o formato `.IMCA` consolidam uma ponte de altíssima eficiência e
 ## Capítulo 7: A Interface Gráfica Desktop e o Empacotamento Multiplataforma (.exe e .AppImage)
 
 ### 7.1 A Filosofia da Interface de Três Telas (Entrada, Carregamento e Saída)
-A experiência do usuário no Convert_IMCA foi consolidada na versão **`v1.3.0`** para traduzir com perfeição a identidade visual e o fluxo de 3 telas solicitado:
+A experiência do usuário no Convert_IMCA foi consolidada na versão **`v1.4.0`** com linguagem visual Black & Orange e geometria arquitetônica:
 - **Zero Poluição:** Telas limpas, sem elementos conflitantes ou caixas desnecessárias.
 - **Narrativa Clara:** Cada tela cumpre uma missão única:
-  1. *Entrada*: O usuário localiza e entrega a planilha em um único botão hero acolhedor.
+  1. *Entrada*: O usuário localiza e entrega a planilha em um botão hero retangular acolhedor.
   2. *Carregamento*: A chama viva pulsa enquanto os algoritmos processam os dados em milissegundos.
   3. *Conclusão*: O usuário escolhe entre inspecionar os dados gerados (*mostrar prévia*) ou revelar o arquivo no computador (*mostrar arquivo gerado*).
 
 ```mermaid
 flowchart TD
-    subgraph Tela1 ["Tela 1: Entrada (Botão Único Hero)"]
+    subgraph Tela1 ["Tela 1: Entrada (Botão Hero Geométrico)"]
         Tag["| MOTOR DE CALENDÁRIO • IMCA"]
-        T1["Convert IMCA\n(Título Editorial em Branco Puro)"]
-        Hero["🔘 BUSCAR ARQUIVO XLSX\n(Botão Único Terracota + Drag&Drop)"]
+        T1["Convert IMCA\n(Tipografia Branca Pura #FFFFFF)"]
+        Hero["🟧 BUSCAR ARQUIVO XLSX\n(Cartão Retangular #F25623 + Drag&Drop)"]
         Tag --> T1 --> Hero
     end
 
     subgraph Tela2 ["Tela 2: Carregamento"]
-        F2["🔥 Chama Viva Animada\n(Breathing Glow 60 FPS)"]
+        F2["🔥 Chama Viva Animada\n(Breathing Glow Orange #F25623)"]
         S2["Status Dinâmico:\n'Lendo planilha...' -> 'Extraindo 318 eventos...'"]
         F2 --> S2
     end
 
-    subgraph Tela3 ["Tela 3: Conclusão"]
-        R1["mostrar prévia\n(Gaveta com Tabela & Métricas)"]
-        R2["mostrar arquivo gerado\n(Revela na Pasta do Sistema)"]
+    subgraph Tela3 ["Tela 3: Conclusão (Cartões Geométricos)"]
+        R1["mostrar prévia\n(Cartão Escuro #242424)"]
+        R2["mostrar arquivo gerado\n(Cartão Orange #F25623)"]
         R3["↺ Converter outro arquivo"]
         R1 --- R2 --- R3
     end
@@ -405,14 +409,16 @@ flowchart TD
     R3 --> Tela1
 ```
 
-### 7.2 Tela 1: O Começo com Botão Único Hero e Estética Editorial
-A versão `v1.3.0` refinou a tela de abertura eliminando toda e qualquer ambiguidade ou redundância visual:
-- **Identidade Visual e Paleta:** Inspirada no design editorial moderno com fundo grafite fosco profundo (`#151619`), iluminação ambiente discreta e acentos de cor em terracota / crimson sofisticado (`#B83E44` a `#8E262B`), acompanhados pela assinatura visual da barra vertical (`|`).
-- **Eliminação de Redundância (O Botão Único):** Nas versões anteriores, coexistiam uma pílula cinza e um botão inferior de busca. Na `v1.3.0`, a interação foi unificada em **um único botão hero**:
-  - Formato pill generoso com gradiente terracota suave e elevação dinâmica no hover (`translateY(-2px)` com sombra difusa).
-  - Ícone vetorial SVG de upload integrado em um medalhão circular translúcido.
+### 7.2 Tela 1: O Começo Geométrico (Black #171717 & Orange #F25623)
+A versão `v1.4.0` adota a estética Black & Orange com geometria menos arredondada:
+- **Identidade Visual e Paleta:** O fundo preto fosco profundo (`#171717`) acolhe elementos com bordas em cinza escuro (`#333333`) e iluminação ambiente calorosa em laranja vibrante (`#F25623`).
+- **Geometria de Cantos (Menos Arredondados):** Em conformidade com o design gráfico moderno, todos os botões e cartões utilizam raios suaves de canto (`border-radius: 8px` a `12px`), abandonando as pílulas arredondadas convencionais em favor de uma estética estruturada e industrial.
+- **Botão Único Hero Geométrico:**
+  - Formato retangular moderno de 72px de altura com cantos de 12px.
+  - Gradiente marcante em Orange (`#F25623` a `#D84210`) com sombra difusa e brilho dinâmico no hover.
+  - Ícone de upload integrado em caixa geométrica translúcida de 8px de raio.
   - Título em caixa alta `BUSCAR ARQUIVO XLSX` acompanhado pelo subtítulo orientativo `ou arraste e solte a planilha aqui`.
-  - **Área Ativa de Drag & Drop:** O usuário pode clicar para abrir a janela nativa do sistema operacional ou simplesmente soltar qualquer planilha `.xlsx` sobre a janela, momento em que o botão pulsa com uma borda tracejada de alta visibilidade.
+  - **Área Ativa de Drag & Drop:** Suporte integral a arrastar arquivos com destaque visual pulsante ao passar por cima.
 - **Configurações Discretas:** O botão colapsado `⚙ Configurações` mantém o padrão visual limpo, permitindo ajuste de horário padrão (`19:30`) e tradução para português sem poluir a visão do usuário leigo.
 
 ### 7.3 Tela 2: A Chama Viva Animada (Breathing Glow e Etapas Narrativas)

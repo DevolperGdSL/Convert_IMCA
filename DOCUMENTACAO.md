@@ -36,6 +36,13 @@
   - [6.1 Blindagem de Repositório com o .gitignore](#61-blindagem-de-repositório-com-o-gitignore)
   - [6.2 Política de Versionamento Semântico Incremental](#62-política-de-versionamento-semântico-incremental)
   - [6.3 Conclusão e Próximos Passos](#63-conclusão-e-próximos-passos)
+- [Capítulo 7: A Interface Gráfica Desktop e o Empacotamento Multiplataforma (.exe e .AppImage)](#capítulo-7-a-interface-gráfica-desktop-e-o-empacotamento-multiplataforma-exe-e-appimage)
+  - [7.1 A Filosofia da Interface de Tela Única (Simplicidade e Clareza)](#71-a-filosofia-da-interface-de-tela-única-simplicidade-e-clareza)
+  - [7.2 Anatomia da Janela: O Seletor de Arquivos e os Controles de Configuração](#72-anatomia-da-janela-o-seletor-de-arquivos-e-os-controles-de-configuração)
+  - [7.3 O Card do Arquivo Transformado: Métricas de Economia e Prévia](#73-o-card-do-arquivo-transformado-métricas-de-economia-e-prévia)
+  - [7.4 Como o Pacote Linux AppImage (.image) Funciona por Dentro (AppDir e AppRun)](#74-como-o-pacote-linux-appimage-image-funciona-por-dentro-appdir-e-apprun)
+  - [7.5 Como o Executável Windows (.exe) é Construído Sem Dependências](#75-como-o-executável-windows-exe-é-construído-sem-dependências)
+  - [7.6 A Linha de Montagem em Nuvem do GitHub Actions](#76-a-linha-de-montagem-em-nuvem-do-github-actions)
 
 ---
 
@@ -338,13 +345,96 @@ Para evitar que binários de sistema operacional, arquivos temporários de compi
 
 ### 6.2 Política de Versionamento Semântico Incremental
 O projeto adota a convenção de Versionamento Semântico (`MAJOR.MINOR.PATCH`):
-- **Versão `v1.0.0` (Versão Atual):**
+- **Versão `v1.0.0`:**
   - Criação da especificação formal do padrão `.IMCA v1.0`.
   - Implementação do motor nativo em Rust (compilação estática de 1.5MB).
   - Implementação do motor portátil em Python (zero dependências).
   - Módulo TypeScript de alta velocidade para o `cabeceira-pwa1`.
   - Scripts de automação para Windows e Linux.
   - Documentação completa em formato de livro.
+- **Versão `v1.1.0` (Versão Atual):**
+  - Criação da Interface Gráfica Desktop de tela única ([convert_imca_gui.py](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/convert_imca_gui.py)).
+  - Suporte a empacotamento autônomo Linux AppImage (`Convert_IMCA-x86_64.AppImage` e `.image`).
+  - Suporte a executável de janela para Windows (`Convert_IMCA_GUI.exe`).
+  - Criação de scripts de compilação dedicados ([build_appimage.sh](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_appimage.sh) e [build_windows_gui.bat](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_windows_gui.bat)).
+  - Atualização do pipeline de CI/CD do GitHub Actions com distribuição automática de todos os artefatos.
 
 ### 6.3 Conclusão e Próximos Passos
 O conversor e o formato `.IMCA` consolidam uma ponte de altíssima eficiência entre as secretarias da igreja (que trabalham com planilhas Excel) e os voluntários na ponta final (que utilizam o aplicativo móvel `cabeceira-pwa1`). A economia de mais de 73% de armazenamento e a velocidade de leitura em milissegundos garantem uma experiência de uso fluida, estável e moderna.
+
+---
+
+## Capítulo 7: A Interface Gráfica Desktop e o Empacotamento Multiplataforma (.exe e .AppImage)
+
+### 7.1 A Filosofia da Interface de Tela Única (Simplicidade e Clareza)
+Nem todos os operadores ministeriais ou membros da secretaria estão confortáveis em utilizar terminais de comando pretos com comandos como `./target/release/convert_imca --preview`. 
+
+Por essa razão, na versão **`v1.1.0`**, introduzimos a interface gráfica desktop oficial do Convert_IMCA. A filosofia que guiou sua criação é a do **"Mínimo Esforço Cognitivo"**:
+- **Uma Única Tela:** Todas as ações começam e terminam no mesmo local. Não existem janelas pop-up desnecessárias, wizards confusos de vários passos ou menus ocultos.
+- **Fluxo Linear:** 
+  1. *Selecionar a planilha* $\rightarrow$ 
+  2. *Ajustar opções se desejar* $\rightarrow$ 
+  3. *Clicar em Converter* $\rightarrow$ 
+  4. *Visualizar o resultado e abrir a pasta*.
+
+```mermaid
+flowchart LR
+    A["1. Selecionar Arquivo\n(Diálogo Nativo .xlsx)"] --> B["2. Opções Rápidas\n(Horário e Tradução)"]
+    B --> C["3. Clique em Converter\n(Execução < 50ms)"]
+    C --> D["4. Arquivo Transformado\n(Métricas, Prévia e Abrir Pasta)"]
+```
+
+### 7.2 Anatomia da Janela: O Seletor de Arquivos e os Controles de Configuração
+A interface foi construída em cima de uma paleta escura moderna (*Dark Slate 900*):
+
+1. **Card de Entrada de Dados:**
+   - Possui uma barra de texto com o caminho absoluto da planilha selecionada.
+   - O botão `📂 Procurar...` aciona o seletor nativo de arquivos do sistema operacional (o Explorer no Windows ou o seletor GTK/KDE no Linux), filtrando automaticamente arquivos com extensão `.xlsx`.
+2. **Card de Opções de Formatação:**
+   - **Horário Padrão:** Um campo de edição rápida preenchido por padrão com `19:30`. Caso um culto não possua hora explícita na planilha, esse valor é atribuído.
+   - **Tradução de Dias da Semana:** Uma caixa de seleção que traduz automaticamente dias em inglês (`Wednesday`, `Friday`) para nomes amigáveis em português (`Quarta-feira`, `Sexta-feira`).
+3. **Botão de Ação Primária:**
+   - Um botão verde esmeralda de ponta a ponta: `✨ CONVERTER PARA FORMATO .IMCA`. Ele possui microinterações de hover e clique para fornecer retorno tátil visual imediato.
+
+### 7.3 O Card do Arquivo Transformado: Métricas de Economia e Prévia
+Após o clique de conversão, o card inferior da janela ganha vida e apresenta o **Arquivo Transformado**:
+- **Status Positivo:** O título se altera para `✅ Arquivo Transformado com Sucesso!` acompanhado pelo caminho do novo arquivo gerado (`.imca`) e o tempo de execução em milissegundos.
+- **Botão `📁 Abrir na Pasta`:** Dispara o gerenciador de arquivos do sistema operacional com a pasta aberta e o arquivo selecionado, permitindo ao usuário copiar o arquivo ou enviá-lo imediatamente por e-mail ou WhatsApp.
+- **Painel com Quatro Cards Numéricos:**
+  - **EVENTOS:** Quantidade de cultos e reuniões validados (ex: `318`).
+  - **TAMANHO .XLSX:** Peso da planilha de origem (ex: `96.8 KB`).
+  - **TAMANHO .IMCA:** Peso do arquivo de texto gerado (ex: `25.8 KB`).
+  - **ECONOMIA:** Percentual de redução de tamanho (ex: `-73.4%`).
+- **Tabela de Prévia Interativa (Treeview):**
+  - Exibe os primeiros 20 eventos com colunas organizadas: *Data (ISO)*, *Dia da Semana*, *Horário*, *Nome do Evento*, *Local* e *Solicitante*.
+  - Inclui barra de rolagem suave para conferência rápida antes de publicar a escala no PWA.
+
+### 7.4 Como o Pacote Linux AppImage (.image) Funciona por Dentro (AppDir e AppRun)
+No ecossistema Linux, distribuir programas para usuários comuns é um desafio clássico devido à proliferação de distribuições (Ubuntu, Debian, Fedora, Arch, openSUSE). O formato **AppImage** resolve isso permitindo que um aplicativo rode como se fosse um `.exe` portátil do Windows: basta baixar e dar duplo clique.
+
+O script [build_appimage.sh](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_appimage.sh) automatiza as 5 engrenagens desse processo:
+1. **Compilação da Aplicação:** O código Python e a biblioteca gráfica são compilados em uma pasta de distribuição autônoma contendo o interpretador embutido e os binários da biblioteca gráfica Tcl/Tk.
+2. **Estrutura `AppDir`:** Monta a árvore de diretórios padrão de sistemas Unix:
+   - `AppDir/usr/bin/convert_imca_gui`: O executável da interface.
+   - `AppDir/usr/bin/convert_imca`: O executável nativo em Rust (disponível dentro do mesmo pacote!).
+   - `AppDir/convert_imca.png`: O ícone em alta resolução do aplicativo.
+   - `AppDir/convert_imca.desktop`: O arquivo de metadados exigido pelos ambientes gráficos (GNOME, KDE, XFCE).
+3. **O Script de Inicialização `AppRun`:** Um script shell que detecta a localização em que o AppImage foi montado em memória (`$APPDIR`), ajusta as variáveis de biblioteca `LD_LIBRARY_PATH`, `TCL_LIBRARY` e dispara o executável sem poluir o sistema do usuário.
+4. **Compressão SquashFS:** A ferramenta `appimagetool` empacota toda a pasta `AppDir` em uma imagem compactada SquashFS de aproximadamente **12 MB** com um cabeçalho executável ELF.
+5. **Compatibilidade Dupla:** O script cria tanto o arquivo com a extensão padrão `.AppImage` quanto com a extensão simplificada `.image` solicitada pelo operador.
+
+### 7.5 Como o Executável Windows (.exe) é Construído Sem Dependências
+No Windows, os usuários esperam um arquivo `.exe` que possa ser aberto diretamente:
+- O script [build_windows_gui.bat](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/build_windows_gui.bat) utiliza os parâmetros `--onefile` e `--windowed` do PyInstaller.
+- O parâmetro `--windowed` impede que uma janela preta de prompt de comando apareça ao fundo quando a interface gráfica é iniciada.
+- O parâmetro `--icon "assets\icon.ico"` embute o ícone oficial no cabeçalho binário do Windows, aparecendo no Explorador de Arquivos e na barra de tarefas.
+- O resultado é o executável `Convert_IMCA_GUI.exe`, que funciona em qualquer computador com Windows 10 ou Windows 11 sem exigir Python, Node ou qualquer outro programa instalado.
+
+### 7.6 A Linha de Montagem em Nuvem do GitHub Actions
+Para garantir que os executáveis de Windows e Linux estejam sempre sincronizados com o código-fonte, atualizamos o fluxo contínuo [.github/workflows/release.yml](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/.github/workflows/release.yml).
+
+Sempre que uma nova versão é publicada no repositório:
+- Um servidor Ubuntu do GitHub executa o `build_appimage.sh` e gera o `Convert_IMCA-linux-x86_64.AppImage`.
+- Um servidor Windows Server do GitHub executa a compilação do executável e gera o `Convert_IMCA_GUI-windows.exe`.
+- Uma esteira final coleta todos os arquivos e cria automaticamente uma página de **Release** oficial no GitHub com os links diretos para download.
+

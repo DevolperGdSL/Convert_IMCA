@@ -4,16 +4,42 @@
 
 ---
 
-## ⚡ Destaques de Desempenho
+## ⚡ Destaques de Desempenho & Facilidade
 
+- **Interface Gráfica Simples (Tela Única):** Selecione a planilha, clique em converter e visualize instantaneamente o arquivo gerado com todas as estatísticas e prévia de cultos.
+- **Distribuição Multiplataforma:**
+  - **Linux:** Pacote `.AppImage` (ou `.image`) portátil, que abre com duplo clique.
+  - **Windows:** Executável autônomo `.exe` com ícone embutido e sem janela de console.
 - **Redução de Tamanho:** De 96.8 KB (`.xlsx`) para **25.7 KB** em texto puro (**-73.4%**) e **4.4 KB** comprimido (**-95.5%**).
 - **Ultra-Rápido:** Converte a planilha anual inteira (318 eventos) em **6.36 milissegundos** no motor nativo Rust e **45 ms** no motor portátil Python.
 - **Zero Dependências no PWA:** Elimina bibliotecas pesadas de mais de 1.2 MB (como SheetJS), permitindo leitura em **1.11 ms** com JavaScript/TypeScript puro.
-- **Multiplataforma Nativo:** Suporte completo e builds para **Linux** e **Windows** (`.exe`).
 
 ---
 
-## 🚀 Como Usar
+## 🖥️ Como Abrir a Interface Gráfica
+
+### 1. No Linux (AppImage / .image)
+Basta dar duplo clique no arquivo:
+```bash
+./dist/Convert_IMCA-x86_64.AppImage
+# Ou via atalho:
+./dist/Convert_IMCA.image
+```
+
+### 2. No Windows (.exe)
+Basta dar duplo clique em `Convert_IMCA_GUI.exe` na pasta `dist/` ou compilá-lo com:
+```cmd
+build_windows_gui.bat
+```
+
+### 3. Execução Direta via Python
+```bash
+python3 convert_imca_gui.py
+```
+
+---
+
+## 🚀 Como Usar via Linha de Comando (CLI)
 
 ### 1. No Linux (Binário Nativo Rust)
 ```bash

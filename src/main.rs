@@ -13,7 +13,7 @@ use std::time::Instant;
 #[command(
     name = "convert_imca",
     author = "Gabriel <DevolperGdSL>",
-    version = "1.2.0",
+    version = "1.3.0",
     about = "Conversor ultra-rápido de planilhas Excel (.xlsx) para o formato leve .IMCA (cabeceira-pwa1)"
 )]
 struct Args {
@@ -66,7 +66,7 @@ fn main() {
     });
 
     println!("============================================================");
-    println!(" 🚀 CONVERSOR IMCA v1.0.0 (High-Performance Engine)");
+    println!(" 🚀 CONVERSOR IMCA v{} (High-Performance Engine)", env!("CARGO_PKG_VERSION"));
     println!("============================================================");
     println!(" 📂 Arquivo de Entrada : {}", args.input.display());
     println!(" 💾 Arquivo de Saída   : {}", output_path.display());

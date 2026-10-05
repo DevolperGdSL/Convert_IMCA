@@ -355,12 +355,13 @@ O projeto adota a convenção de Versionamento Semântico (`MAJOR.MINOR.PATCH`):
 - **Versão `v1.1.0`:**
   - Criação da Interface Gráfica Desktop de tela única.
   - Suporte a empacotamento autônomo Linux AppImage e Windows `.exe`.
-- **Versão `v1.2.0` (Versão Atual):**
-  - Reformulação visual completa da UI/UX baseada no conceito do usuário em 3 telas lineares.
-  - **Tela 1 (Entrada):** Título *Convert IMCA* com degradê quente, pílula de seleção de arquivo *BUSQUE O ARQUIVO XLSX* e botão pill laranja *Buscar arquivo*.
-  - **Tela 2 (Carregamento):** O símbolo da chama viva em alta resolução com efeito de pulso (*breathing glow* e sombras dinâmicas) e micro-etapas narrativas de processamento.
-  - **Tela 3 (Conclusão):** Dois botões principais dedicados: *mostrar prévia* (abre gaveta com tabela de eventos e métricas de compressão) e *mostrar arquivo gerado* (abre o explorador de arquivos local com o `.imca` selecionado).
-  - Atualização dos scripts de build de AppImage e Windows `.exe`.
+- **Versão `v1.2.0`:**
+  - Reformulação visual com fluxo de 3 telas lineares e introdução da animação da chama viva com *breathing glow*.
+- **Versão `v1.3.0` (Versão Atual):**
+  - **Refinamento Exclusivo da Tela Inicial:** Unificação da entrada em **um único botão hero** (`BUSCAR ARQUIVO XLSX`), eliminando elementos duplicados e integrando clique e Drag & Drop na mesma ação.
+  - **Identidade Visual Editorial Dark & Terracota:** Adoção da paleta matte charcoal (`#151619`), acentos em terracota sofisticado (`#B83E44`), barras verticais indicadoras (`|`) e tipografia moderna de alto contraste.
+  - Preservação integral das telas 2 (chama viva com micro-etapas) e 3 (prévia interativa e revelação do arquivo gerado no SO).
+  - Atualização dos executáveis de distribuição e empacotamento Linux AppImage.
 
 ### 6.3 Conclusão e Próximos Passos
 O conversor e o formato `.IMCA` consolidam uma ponte de altíssima eficiência entre as secretarias da igreja (que trabalham com planilhas Excel) e os voluntários na ponta final (que utilizam o aplicativo móvel `cabeceira-pwa1`). A economia de mais de 73% de armazenamento e a velocidade de leitura em milissegundos garantem uma experiência de uso fluida, estável e moderna.
@@ -370,20 +371,20 @@ O conversor e o formato `.IMCA` consolidam uma ponte de altíssima eficiência e
 ## Capítulo 7: A Interface Gráfica Desktop e o Empacotamento Multiplataforma (.exe e .AppImage)
 
 ### 7.1 A Filosofia da Interface de Três Telas (Entrada, Carregamento e Saída)
-A experiência do usuário no Convert_IMCA foi totalmente reformulada na versão **`v1.2.0`** para traduzir com perfeição a identidade visual e o fluxo de 3 telas solicitado:
+A experiência do usuário no Convert_IMCA foi consolidada na versão **`v1.3.0`** para traduzir com perfeição a identidade visual e o fluxo de 3 telas solicitado:
 - **Zero Poluição:** Telas limpas, sem elementos conflitantes ou caixas desnecessárias.
 - **Narrativa Clara:** Cada tela cumpre uma missão única:
-  1. *Entrada*: O usuário localiza e entrega a planilha.
-  2. *Carregamento*: A chama do Espírito Santo pulsa enquanto os algoritmos processam os dados em milissegundos.
+  1. *Entrada*: O usuário localiza e entrega a planilha em um único botão hero acolhedor.
+  2. *Carregamento*: A chama viva pulsa enquanto os algoritmos processam os dados em milissegundos.
   3. *Conclusão*: O usuário escolhe entre inspecionar os dados gerados (*mostrar prévia*) ou revelar o arquivo no computador (*mostrar arquivo gerado*).
 
 ```mermaid
 flowchart TD
-    subgraph Tela1 ["Tela 1: Entrada"]
-        T1["Convert IMCA\n(Título com Degradê de Fogo)"]
-        P1["BUSQUE O ARQUIVO XLSX\n(Pílula Arredondada / Dropzone)"]
-        B1["Buscar arquivo\n(Botão Pill Laranja Brilhante)"]
-        T1 --> P1 --> B1
+    subgraph Tela1 ["Tela 1: Entrada (Botão Único Hero)"]
+        Tag["| MOTOR DE CALENDÁRIO • IMCA"]
+        T1["Convert IMCA\n(Título Editorial em Branco Puro)"]
+        Hero["🔘 BUSCAR ARQUIVO XLSX\n(Botão Único Terracota + Drag&Drop)"]
+        Tag --> T1 --> Hero
     end
 
     subgraph Tela2 ["Tela 2: Carregamento"]
@@ -399,20 +400,24 @@ flowchart TD
         R1 --- R2 --- R3
     end
 
-    B1 --> Tela2
+    Hero --> Tela2
     Tela2 --> Tela3
     R3 --> Tela1
 ```
 
-### 7.2 Tela 1: A Pílula "BUSQUE O ARQUIVO XLSX" e o Botão "Buscar arquivo"
-A primeira tela acolhe o usuário com um fundo preto OLED absoluto (`#000000`) iluminado por uma luz ambiente suave:
-- **Título Convert IMCA:** Renderizado em tipografia forte com sombra avermelhada de neon (`#FF3B30`).
-- **Pílula de Seleção:** Um elemento horizontal arredondado no tom cinza claro (`#D0D7DE`) com o texto em vermelho bold: `BUSQUE O ARQUIVO XLSX`. Clicar na pílula ou arrastar um arquivo sobre ela aciona o leitor.
-- **Botão Buscar arquivo:** Uma pílula laranja com brilho quente que dispara o seletor nativo de arquivos do sistema operacional (GTK no Linux ou Explorer no Windows), filtrando planilhas `.xlsx`.
+### 7.2 Tela 1: O Começo com Botão Único Hero e Estética Editorial
+A versão `v1.3.0` refinou a tela de abertura eliminando toda e qualquer ambiguidade ou redundância visual:
+- **Identidade Visual e Paleta:** Inspirada no design editorial moderno com fundo grafite fosco profundo (`#151619`), iluminação ambiente discreta e acentos de cor em terracota / crimson sofisticado (`#B83E44` a `#8E262B`), acompanhados pela assinatura visual da barra vertical (`|`).
+- **Eliminação de Redundância (O Botão Único):** Nas versões anteriores, coexistiam uma pílula cinza e um botão inferior de busca. Na `v1.3.0`, a interação foi unificada em **um único botão hero**:
+  - Formato pill generoso com gradiente terracota suave e elevação dinâmica no hover (`translateY(-2px)` com sombra difusa).
+  - Ícone vetorial SVG de upload integrado em um medalhão circular translúcido.
+  - Título em caixa alta `BUSCAR ARQUIVO XLSX` acompanhado pelo subtítulo orientativo `ou arraste e solte a planilha aqui`.
+  - **Área Ativa de Drag & Drop:** O usuário pode clicar para abrir a janela nativa do sistema operacional ou simplesmente soltar qualquer planilha `.xlsx` sobre a janela, momento em que o botão pulsa com uma borda tracejada de alta visibilidade.
+- **Configurações Discretas:** O botão colapsado `⚙ Configurações` mantém o padrão visual limpo, permitindo ajuste de horário padrão (`19:30`) e tradução para português sem poluir a visão do usuário leigo.
 
 ### 7.3 Tela 2: A Chama Viva Animada (Breathing Glow e Etapas Narrativas)
 Assim que o arquivo é selecionado, a interface transiciona instantaneamente para a tela de carregamento:
-- **A Chama:** O símbolo oficial da chama extraído em alta definição ([`assets/flame.png`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/assets/flame.png)).
+- **A Chama:** O símbolo oficial da chama extraído em alta definição ([`assets/flame.png`](file:///home/gabriel/Documentos/GitHub/Convert_IMCA/assets/flame.png)) e embutido diretamente no HTML como base64, garantindo autonomia total sem necessidade de arquivos externos.
 - **Animação Breathing Glow:** Um efeito de respiração orgânica em CSS3 que alterna a escala da chama entre 96% e 105% acompanhada por sombras dinâmicas de luz vermelha e âmbar.
 - **Micro-Etapas:** O texto abaixo da chama informa os passos do algoritmo:
   - *"Lendo planilha Excel..."*
@@ -435,10 +440,16 @@ Finalizada a conversão, a interface exibe as duas opções de forma direta e li
 3. **Link `↺ Converter outro arquivo`:**
    - Reseta a interface suavemente e retorna para a Tela 1 para uma nova conversão.
 
-### 7.5 O Motor Gráfico PyWebView e a Ponte Bidirecional
-A interface é alimentada por um motor leve de **PyWebView**:
+### 7.5 O Motor Gráfico PyWebView, a Ponte Bidirecional e o Seletor Resiliente
+A interface é alimentada por um motor leve e autônomo de **PyWebView**:
 - **Renderização Nativa:** No Linux utiliza o WebKitGTK 2.50 pré-instalado; no Windows utiliza o Microsoft Edge WebView2 nativo do sistema operacional.
-- **Ponte Python/JS:** Quando o usuário clica em qualquer ação no HTML/CSS, uma chamada assíncrona (`window.pywebview.api.convert_file`) é enviada diretamente ao interpretador Python, que processa a planilha com o motor de alta velocidade e devolve o resultado em JSON.
+- **Ponte Python/JS:** Quando o usuário clica em qualquer ação no HTML/CSS, uma chamada assíncrona (`window.pywebview.api.select_file` ou `convert_file`) é enviada diretamente ao interpretador Python, que interage com o sistema operacional e devolve o resultado em JSON.
+- **Arquitetura de Seletor de Arquivos com Triplo Fallback:**
+  Para garantir que a janela nativa de busca do sistema operacional sempre abra com 100% de confiabilidade, mesmo diante de peculiaridades entre Wayland e X11 no Linux:
+  1. *Camada 1 (Nativa do PyWebView):* Dispara `window.create_file_dialog` com o enum `FileDialog.OPEN`.
+  2. *Camada 2 (Fallback Nativo GNOME/Zenity):* Se a chamada da camada 1 encontrar qualquer restrição de thread no GTK, o motor invoca o utilitário nativo `/usr/bin/zenity --file-selection`, padrão oficial do ecossistema Linux/Ubuntu.
+  3. *Camada 3 (Fallback Tkinter):* Caso nenhum diálogo anterior responda, o módulo padrão `tkinter.filedialog` é disparado como rede de segurança final.
+  4. *Camada Web:* No JavaScript, a higienização de caminhos multiplataforma utiliza o padrão seguro `.replace(/\\/g, '/').split('/').pop()`, imune a ambiguidades de escape em expressões regulares.
 
 ### 7.6 Empacotamento Linux AppImage (.image) e Executável Windows (.exe)
 Os artefatos de distribuição foram atualizados para incorporar toda a nova interface:

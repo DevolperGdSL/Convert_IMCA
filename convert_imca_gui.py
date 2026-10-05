@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-CONVERT_IMCA - Interface Gráfica Premium (v1.2.0)
-UX/UI Baseada no Conceito Visual:
-- Tela 1: Entrada com Pílula "BUSQUE O ARQUIVO XLSX" e Botão "Buscar arquivo"
+CONVERT_IMCA - Interface Gráfica Desktop (v1.3.0)
+UX/UI Refinada (Editorial Dark & Terracota):
+- Tela 1: Entrada com Botão Único Hero "BUSCAR ARQUIVO XLSX" (Click + Drag&Drop)
 - Tela 2: Carregamento com a Chama Viva Animada (Breathing Glow)
 - Tela 3: Saída com Pílulas "Mostrar prévia" e "Mostrar arquivo gerado"
 =============================================================================
@@ -33,15 +33,57 @@ class ConverterApi:
         self.window = window
 
     def select_file(self):
-        """Abre o seletor nativo do SO e retorna o caminho selecionado"""
-        if not self.window:
-            return None
+        """Abre o seletor nativo do SO e retorna o caminho selecionado com fallback de segurança"""
         file_types = ("Planilhas Excel (*.xlsx)", "Todos os Arquivos (*.*)")
         dialog_type = getattr(webview, "FileDialog", None)
         open_flag = dialog_type.OPEN if dialog_type else getattr(webview, "OPEN_DIALOG", 10)
-        result = self.window.create_file_dialog(open_flag, allow_multiple=False, file_types=file_types)
-        if result and len(result) > 0:
-            return result[0]
+
+        # 1. Tenta o seletor nativo do PyWebView
+        if self.window:
+            try:
+                result = self.window.create_file_dialog(open_flag, allow_multiple=False, file_types=file_types)
+                if result and len(result) > 0:
+                    return result[0]
+                elif result is None:
+                    # Diálogo abriu normalmente e usuário cancelou
+                    return None
+            except Exception as err:
+                print(f"[GUI] create_file_dialog erro: {err}. Acionando fallback do sistema...")
+
+        # 2. Fallback via zenity (padrão nativo no Linux / Ubuntu)
+        if sys.platform.startswith("linux"):
+            import shutil
+            if shutil.which("zenity"):
+                try:
+                    p = subprocess.run(
+                        ["zenity", "--file-selection", "--title=Selecione a Planilha (.xlsx)", "--file-filter=Planilhas Excel (*.xlsx) | *.xlsx", "--file-filter=Todos os Arquivos | *"],
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        text=True
+                    )
+                    if p.returncode == 0 and p.stdout.strip():
+                        return p.stdout.strip()
+                    elif p.returncode == 1:
+                        return None
+                except Exception as z_err:
+                    print(f"[GUI] Fallback zenity falhou: {z_err}")
+
+        # 3. Fallback via Tkinter
+        try:
+            import tkinter as tk
+            from tkinter import filedialog
+            root = tk.Tk()
+            root.withdraw()
+            root.attributes("-topmost", True)
+            selected = filedialog.askopenfilename(
+                title="Selecione a Planilha (.xlsx)",
+                filetypes=[("Planilhas Excel", "*.xlsx"), ("Todos os Arquivos", "*.*")]
+            )
+            root.destroy()
+            return selected if selected else None
+        except Exception as tk_err:
+            print(f"[GUI] Fallback tkinter falhou: {tk_err}")
+
         return None
 
     def convert_file(self, file_path, default_time="19:30", translate_days=True):
@@ -111,7 +153,7 @@ def main():
         width=780,
         height=680,
         min_size=(680, 560),
-        background_color="#000000",
+        background_color="#151619",
         resizable=True
     )
     api.set_window(window)

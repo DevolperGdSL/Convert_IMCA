@@ -3,20 +3,25 @@ set -e
 
 # =============================================================================
 # BUILD_APPIMAGE.SH - Gerador de Pacote Linux AppImage (.image / .AppImage)
-# Projeto: Convert_IMCA (v1.1.0)
+# Projeto: Convert_IMCA (v1.3.0)
 # =============================================================================
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 APPDIR="${PROJECT_DIR}/build/AppDir"
 OUTPUT_NAME="Convert_IMCA-x86_64.AppImage"
 
+PYTHON_BIN="python3"
+if command -v python3.10 >/dev/null 2>&1; then
+    PYTHON_BIN="python3.10"
+fi
+
 echo "============================================================"
 echo " 🚀 INICIANDO GERAÇÃO DO PACOTE LINUX APPIMAGE"
 echo "============================================================"
 
 # 1. Compilar executável com PyInstaller caso ainda não exista
-echo "📦 [1/5] Compilando executável da interface com PyInstaller..."
-python3 -m PyInstaller --noconfirm --onedir --windowed \
+echo "📦 [1/5] Compilando executável da interface com PyInstaller (${PYTHON_BIN})..."
+${PYTHON_BIN} -m PyInstaller --noconfirm --onedir --windowed \
     --name "convert_imca_gui" \
     --add-data "assets:assets" \
     --distpath "${PROJECT_DIR}/dist" \
